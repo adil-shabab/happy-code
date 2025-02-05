@@ -3320,7 +3320,7 @@ label {
   display: inline-block;
 }
 .cs_site_branding img {
-  max-height: 45px;
+  max-height: 80px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -3398,20 +3398,7 @@ label {
   .cs_nav .cs_nav_list > li.menu-item-has-children > a {
     position: relative;
   }
-  .cs_nav .cs_nav_list > li.menu-item-has-children > a::after {
-    content: "";
-    display: inline-block;
-    height: 8px;
-    width: 8px;
-    border: 2px solid var(--body-color);
-    transform: rotate(45deg);
-    border-left: 0;
-    border-top: 0;
-    margin-left: 6px;
-    position: relative;
-    top: -2px;
-    border-radius: 0px 0px 2px 0px;
-  }
+  
   .cs_nav .cs_nav_list > li.menu-item-has-children.cs_changes_color_1 > a {
     position: relative;
   }
@@ -3824,11 +3811,18 @@ label {
   line-height: 1.6em;
   margin: -10px -20px;
 }
+.footer-section{
+  height: 40px;
+}
+.last-footer-sestion{
+  height: 40px;
+}
+
 .cs_footer_contact_list li {
   padding-left: 30px;
   position: relative;
-  margin: 10px 20px;
-  max-width: 200px;
+  margin: 8px 10px;
+  max-width: 300px;
 }
 .cs_footer_contact_list li i {
   color: #fff;
@@ -3839,7 +3833,8 @@ label {
 }
 
 .cs_footer_info img {
-  margin-bottom: 20px;
+
+  height: 100px;
 }
 .cs_footer_info p {
   margin-bottom: 50px;
