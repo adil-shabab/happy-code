@@ -5062,7 +5062,7 @@ label {
 }
 
 .cs_card.cs_style_2 {
-  display: flex;
+  
   justify-content: space-between;
   position: relative;
 }
@@ -5081,7 +5081,7 @@ label {
 }
 .cs_card.cs_style_2 .cs_card_logo {
   flex: none;
-  width: 180px;
+  width: 140px;
   padding-right: 30px;
 }
 .cs_card.cs_style_2 .cs_card_title {
