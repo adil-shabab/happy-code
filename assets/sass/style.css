@@ -101,6 +101,9 @@ h6 {
   color: var(--heading-color);
   font-family: "Inter Tight", sans-serif;
 }
+.blog-detiats-para{
+  font-weight: 600;
+}
 
 .cs_primary_font {
   font-family: "Inter Tight", sans-serif;
