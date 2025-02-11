@@ -177,7 +177,7 @@
   function swiperInit() {
     if ($.exists(".cs_slider_1")) {
       var swiper = new Swiper(".cs_slider_1", {
-        loop: true,
+        loop: false,
         speed: 1000,
         autoplay: false,
         pagination: {
