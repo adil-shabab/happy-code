@@ -2194,10 +2194,14 @@ label {
   width: 54px;
   height: 23px;
 }
+.favi-icon-ropling{
+  width: 35px;
+}
+
 .cs_animated_badge .rounded_text {
   width: 162px;
   height: 163px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-weight: 500;
   z-index: -1;
   font-family: Inter Tight;
@@ -6292,7 +6296,7 @@ label {
   position: relative;
 }
 .mission-box {
-  background-color: rgba(220, 220, 220, 0.6);
+  background-color: rgb(255, 255, 255);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -6339,7 +6343,7 @@ label {
   margin: 0;
 }
 .vision-box {
-  background-color: rgba(169, 169, 169, 0.12);  /* Light gray background with transparency */
+  background-color: rgb(255, 255, 255);  /* Light gray background with transparency */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -6415,6 +6419,27 @@ label {
   left: 100%;
   width: max-content;
 }
+
+.btn-bookon{
+  background-color: white;
+    height: 95px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 23px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.cs_hero_btn:hover {  /* Darker background color on hover */
+  transform: scale(1.1);  /* Slightly enlarge the button on hover */
+  border: 2px solid #faab19; 
+}
+
+
+
+
+
+
+
 
 
 .main-mission{
