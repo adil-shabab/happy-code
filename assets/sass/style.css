@@ -6300,7 +6300,7 @@ label {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+   text-align: start;
   max-width: 700px;
   margin: 30px auto;
   transition: all 0.3s ease;
@@ -6333,6 +6333,10 @@ label {
   color: #333;
   margin: 10px 0;
 }
+.img-blog{
+  border-radius: 10px;
+}
+
 .backgron-misson{
   background: #a9a9a91f;
 }
@@ -6386,6 +6390,7 @@ label {
   color: #444;
   line-height: 1.6;
   margin: 0;
+  text-align: start
 }
 
 
@@ -6443,8 +6448,7 @@ label {
 
 
 .main-mission{
-  align-items: center;
-  text-align: center;
+  
   display: flex
   ;
   flex-direction: column;
