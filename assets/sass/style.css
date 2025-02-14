@@ -6567,6 +6567,18 @@ label {
     margin-bottom: 60px;
   }
 }
+@media (max-width: 500px) {
+
+  .copy-right {
+  
+    margin: 0px 31px 0px 31px;
+    display: flex;
+    flex-direction: column;
+}
+.copy-right div{
+  margin-bottom: 10px;
+}
+}
 /*--------------------------------------------------------------
   28. Services
 ----------------------------------------------------------------*/
