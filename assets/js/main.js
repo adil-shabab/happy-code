@@ -524,6 +524,10 @@
   }
   document.addEventListener("mousemove", mousemoveHandler);
 
+  
+      new WOW().init();
+
+  
   /*--------------------------------------------------------------
       17.Hero text Animation
  --------------------------------------------------------------*/
