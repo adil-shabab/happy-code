@@ -164,7 +164,7 @@ ol {
 /* Portfolio Section */
 .portfolio-section {
   padding: 50px 0;
-  background: #0a0f18; /* Deep Dark Blue for Premium Look */
+  background:#d8dde740; /* Deep Dark Blue for Premium Look */
   text-align: center;
   overflow: hidden;
 }
