@@ -78,7 +78,7 @@
  --------------------------------------------------------------*/
   function preloader() {
     $(".cs_preloader_in").fadeOut();
-    $(".cs_preloader").delay(150).fadeOut("slow");
+    $(".cs_preloader").delay(100).fadeOut("slow");
   }
 
   /*--------------------------------------------------------------
@@ -593,8 +593,8 @@
     tl.from(
       textCharsWritting.chars,
       {
-        duration: 0.5,
-        x: 100,
+        duration: 0.3,
+        x: 50,
         autoAlpha: 0,
         stagger: 0.1,
       },
