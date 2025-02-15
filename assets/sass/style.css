@@ -247,6 +247,7 @@ ol {
   color: var(--heading-color);
 
 }
+
 .btn-bookan{
   background-color: white;
     height: 50px;
@@ -259,6 +260,89 @@ ol {
    background-color: black;
    color: white;
 }
+.mission-vision-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.mission-vision-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  text-align: center;
+}
+
+.mission-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-image:hover {
+  transform: scale(1.05);
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.mission-box,
+.vision-box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  font-size: 30px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+.section-title {
+  font-size: 28px; /* Ensure a readable size */
+  font-weight: bold;
+  color: #333; /* Ensure text color is visible */
+  margin-bottom: 10px;
+  text-align: left;
+  display: block; /* Ensure it's not hidden */
+  position: relative; /* Reset any unwanted positioning */
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.section-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-container {
+      padding: 20px;
+      text-align: center;
+  }
+}
+
 
 /* Portfolio Section */
 .portfolio-section {
@@ -301,14 +385,60 @@ ol {
 .portfolio-item:hover .overlay {
   height: 100%; /* Expands on hover */
 }
+.mission-vision-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-vision-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-vision-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  font-size: 30px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
 
 
 /* Section Title */
 .section-title {
-  font-size: 42px;
+  font-size: 22px;
   font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 50px;
+  /* color: #ffffff; */
+  margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: 0;
@@ -4143,6 +4273,7 @@ label {
   color: #fff;
   font-weight: 900;
   line-height: 1.2em;
+  letter-spacing: 1.5px;
 }
 .cs_footer_info a:hover {
   color: var(--accent-color);
