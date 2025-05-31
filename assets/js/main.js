@@ -1128,3 +1128,29 @@
 
   // End of use strict
 })(jQuery);
+
+const playBtn = document.getElementById('playBtn');
+const video = document.getElementById('mainVideo');
+const wrapper = document.getElementById('videoWrapper');
+const overlay = document.getElementById('videoOverlay');
+const closeBtn = document.getElementById('closeBtn');
+const thumbnail = document.getElementById('videoThumbnail');
+
+// On play
+playBtn.addEventListener('click', () => {
+  wrapper.classList.add('fullscreen');
+  video.play();
+  overlay.style.display = 'none';
+  thumbnail.style.display = 'none';
+  closeBtn.style.display = 'block';
+});
+
+// On close
+closeBtn.addEventListener('click', () => {
+  wrapper.classList.remove('fullscreen');
+  video.pause();
+  video.currentTime = 0;
+  overlay.style.display = 'block';
+  thumbnail.style.display = 'block';
+  closeBtn.style.display = 'none';
+});  
