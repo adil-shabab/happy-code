@@ -7558,7 +7558,6 @@ label {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
-
 .play-button {
     position: absolute;
     bottom: 40px;
@@ -7566,7 +7565,7 @@ label {
     background: rgba(255, 255, 255, 0.85);
     border: none;
     border-radius: 50%;
-    padding: 10px 16px;
+    padding: 20px 22px;
     font-size: 14px;
     cursor: pointer;
     z-index: 3;
