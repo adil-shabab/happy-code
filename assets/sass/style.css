@@ -60,7 +60,15 @@
   --common-color-black: #000000;
   --drak-color: #ffffff;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+h1,h2,h3,h4,h5,h6{
+   font-family: "Cairo", sans-serif !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+span,p,a{
+  font-family: "Cairo", sans-serif !important;
 
+}
 .dark {
   --drak-color: #181818;
   --cr_banner-color: #181818;
@@ -75,32 +83,7 @@
 /*--------------------------------------------------------------
 2. Typography
 ----------------------------------------------------------------*/
-html,
-body {
-  color: var(--body-color);
-  background-color: var(--drak-color);
-  font-family: var(--body-font-family);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6em;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-  padding: 0px;
-  margin: 0px 0px 20px 0px;
-  font-weight: 700;
-  line-height: 1.2em;
-  color: var(--heading-color);
-  font-family: "Inter Tight", sans-serif;
-}
 .blog-detiats-para{
   font-weight: 600;
 }
