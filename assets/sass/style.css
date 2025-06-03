@@ -341,8 +341,33 @@ ol {
       padding: 20px;
       text-align: center;
   }
-}
+  .khajavali{
+  display: block !important;
+ }
+    .vali {
+        padding: 0 !important;
+        max-width: 85% !important; 
+    }
+    .none__value{
+    height: 30px !important;
 
+    }
+    .imagelet__hoem{
+      height: 140px !important;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+}
+.khajavali{
+  display: none;
+
+}
+.vali{
+  max-width: 100%; 
+  padding: 0 100px;
+}
 
 /* Portfolio Section */
 .portfolio-section {
@@ -1952,7 +1977,7 @@ label {
   flex-shrink: 0;
   align-items: center;
   padding: 5px 0px;
-  animation: slide-left 20s linear infinite;
+  animation: slide-left 30s linear infinite;
 }
 .cs_moving_section.cs_stroke_text {
   margin: 0 10px;
@@ -3855,12 +3880,12 @@ label {
 
 
   .Get__on_touch_button{
-  width: 114px;       
+        
   height: 40px;       
  
   left: 1186px;      
   border-radius: 50px;
-  border: 1px solid #a4a4a4; 
+  border: 1px solid #A47864; 
   padding: 10px 16px;
   gap: 10px;         
   display: flex;
@@ -3869,7 +3894,7 @@ label {
   background-color: #fff; 
   cursor: pointer;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: #A47864;
   font-weight: 500;
   }
@@ -7479,17 +7504,71 @@ label {
 }
 
 .video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 2;
-  border-radius: 20px;
-  pointer-events: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px); /* Apply blur */
+    background: linear-gradient(to bottom, #000000, #5B3200), #A47864;
+    z-index: 2;
+    border-radius: 20px;
+    pointer-events: auto;
+    opacity: 0.85;
 }
+.video-preview-wrapper {
+  position: relative;
+}
+
+.video-caption-wrapper {
+  position: absolute;
+  bottom: 20px;     /* Position from the bottom */
+  left: 20px;       /* Position from the left */
+  padding: 20px;
+  max-width: 303px; /* Optional */
+  z-index: 2;
+  transform: none;  /* Remove the vertical centering */
+}
+.banner_peraga{
+    margin-top: 8px; /* top spacing */
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    line-height: 37px;
+    letter-spacing: 0;
+    color: #FFFFFF; /* assuming white text */
+
+}
+.video-caption{
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: #FFFFFF; /* adjust color as needed */
+}
+.video-caption-btn{
+   width: fit-content;       
+    height: 48px;            
+    top: 368px;
+    left: 37px;
+    border-radius: 70px;
+    padding: 10px 48px;       
+    display: flex;
+    align-items: center;
+    gap: 10px;               
+    box-sizing: border-box;  
+    cursor: pointer;
+    background-color: #FFFFFF; 
+    color: #862A00;               
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+
+}
+
+
 
 .video-preview-wrapper.active .video-overlay {
   opacity: 0;
@@ -7521,7 +7600,7 @@ label {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.85);
+  background: hsl(25, 100%, 50%);
   border: none;
   border-radius: 50%;
   padding: 8px 12px;
@@ -7537,31 +7616,20 @@ label {
 .video-preview-wrapper {
   position: relative;
 }
-
-.video-caption {
-  position: absolute;
-  bottom: 20px;   /* adjust as needed */
-  left: 20px;     /* adjust as needed */
-  color: #fff;
-  font-size: 16px;
-  font-family: 'Cairo', sans-serif;
-  background-color: rgba(0, 0, 0, 0.5); /* optional background for readability */
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
 .imagelet__hoem{
-  
-  width: 310px;
+  width: 100%;
   height: 353px;
   top: 120px;
   left: 1060px;
   border-radius: 20px;
   overflow: hidden;
+  object-fit: cover;
 }
 .play__icon{
   margin: 0px;
 }
+
+
 .home__pera_our{
   font-family: 'Cairo', sans-serif;
   font-weight: 100;
@@ -7622,8 +7690,30 @@ label {
   align-items: center;
   justify-content: center; /* or use space-between if needed */
 }
+
 .logo-row img {
   margin-right: 50px;
 }
 
+.under {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  padding-bottom: 10px;
+}
 
+.under::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ff6b00;
+  transition: width 0.3s ease;
+}
+
+.under:hover::after,
+.under.active::after {
+  width: 50%;
+}

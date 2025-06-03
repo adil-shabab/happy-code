@@ -1129,28 +1129,113 @@
   // End of use strict
 })(jQuery);
 
-const playBtn = document.getElementById('playBtn');
-const video = document.getElementById('mainVideo');
-const wrapper = document.getElementById('videoWrapper');
-const overlay = document.getElementById('videoOverlay');
-const closeBtn = document.getElementById('closeBtn');
-const thumbnail = document.getElementById('videoThumbnail');
 
-// On play
-playBtn.addEventListener('click', () => {
-  wrapper.classList.add('fullscreen');
-  video.play();
-  overlay.style.display = 'none';
-  thumbnail.style.display = 'none';
-  closeBtn.style.display = 'block';
+const playBtn = document.getElementById('playBtn');
+const mainVideo = document.getElementById('mainVideo');
+const videoThumbnail = document.getElementById('videoThumbnail');
+const videoOverlay = document.getElementById('videoOverlay');
+const videoCaptionWrapper = document.querySelector('.video-caption-wrapper');
+const closeBtn = document.getElementById('closeBtn');
+
+function hideElements(...elements) {
+  elements.forEach(el => {
+    el.classList.add('hide');
+    el.classList.remove('show');
+  });
+}
+
+function showElements(...elements) {
+  elements.forEach(el => {
+    el.classList.remove('hide');
+    el.classList.add('show');
+  });
+}
+
+playBtn.addEventListener('click', async () => {
+  // Smoothly hide banner elements
+  hideElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
+  // Smoothly show video and close button
+  showElements(mainVideo, closeBtn);
+
+  try {
+    if (mainVideo.requestFullscreen) {
+      await mainVideo.requestFullscreen();
+    } else if (mainVideo.webkitRequestFullscreen) {
+      await mainVideo.webkitRequestFullscreen();
+    } else if (mainVideo.msRequestFullscreen) {
+      await mainVideo.msRequestFullscreen();
+    }
+    mainVideo.play();
+  } catch (err) {
+    console.error("Fullscreen failed:", err);
+    mainVideo.play();
+  }
 });
 
-// On close
-closeBtn.addEventListener('click', () => {
-  wrapper.classList.remove('fullscreen');
-  video.pause();
-  video.currentTime = 0;
-  overlay.style.display = 'block';
-  thumbnail.style.display = 'block';
-  closeBtn.style.display = 'none';
-});  
+closeBtn.addEventListener('click', async () => {
+  mainVideo.pause();
+  mainVideo.currentTime = 0;
+
+  // Smoothly hide video and close button
+  hideElements(mainVideo, closeBtn);
+  // Smoothly show banner elements
+  showElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
+
+  if (document.fullscreenElement) {
+    if (document.exitFullscreen) {
+      await document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      await document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      await document.msExitFullscreen();
+    }
+  }
+});
+
+document.addEventListener('fullscreenchange', () => {
+  if (!document.fullscreenElement) {
+    mainVideo.pause();
+    mainVideo.currentTime = 0;
+
+    hideElements(mainVideo, closeBtn);
+    showElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
+  }
+});
+
+
+
+const stopVideoBtn = document.getElementById('stopVideoBtn');
+
+stopVideoBtn.addEventListener('click', async () => {
+  mainVideo.pause();
+  mainVideo.currentTime = 0;
+
+  // Hide video & buttons
+  mainVideo.classList.remove('show');
+  closeBtn.classList.remove('show');
+  stopVideoBtn.style.display = 'none';
+
+  // Show thumbnail and overlay again
+  videoThumbnail.classList.add('show');
+  videoOverlay.classList.add('show');
+  playBtn.classList.add('show');
+  videoCaptionWrapper.classList.add('show');
+
+  // Exit fullscreen if active
+  if (document.fullscreenElement) {
+    await document.exitFullscreen();
+  }
+});
+
+
+
+
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".cs_nav_list li a").forEach(link => {
+    const span = link.querySelector('.under');
+    if (link.getAttribute("href") === currentPage) {
+      span.classList.add("active");
+    }
+  });
+
+

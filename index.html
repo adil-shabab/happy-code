@@ -57,31 +57,28 @@
                     <div class="cs_main_header_right">
                         <div class="cs_nav cs_medium">
                             <ul class="cs_nav_list">
-                                <li class="">
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li class="">
-                                    <a href="service.html">Services</a>
-                                  
-                                </li>
-                                <li class="">
-                                    <a href="portfolio.html">Portfolio</a>
-                                  
-                                </li>
-                                <li class="">
-                                    <a href="blog.html">Blog</a>
-                                        <li class="">
-                                            <a href="contact.html">Contact</a>
-                                            
+                                        <li>
+                                            <a href="index.html"><span class="under active">Home</span></a>
                                         </li>
-                                    
-                                </li>
-    
+                                        <li>
+                                            <a href="about.html"><span class="under">About</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="service.html"><span class="under">Services</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="portfolio.html"><span class="under">Portfolio</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html"><span class="under">Blog</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html"><span class="under">Contact</span></a>
+                                        </li>
                             </ul>
-                        </div>
+
+                       </div>
+
                     </div>
                     <div class="cs_main_header_right">   
                         <div class="cs_toolbox">
@@ -167,11 +164,11 @@
                                     </svg><span class="ms-2">+91 99669 92122</span></a>
                             </h4>
     
-                            <ul class="cs_social_link">
-                                <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center" target="_blank">Instagram</a>
-                        <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank"   class="cs_center">Linkedin</a>
-                        <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center" target="_blank">Facebook</a>
-                                
+                                <ul class="cs_social_link">
+                                    <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center" target="_blank">Instagram</a>
+                                    <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank"   class="cs_center">Linkedin</a>
+                                    <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center" target="_blank">Facebook</a>
+                                    
                              
                                
                             </ul>
@@ -197,96 +194,117 @@
     <div id="scrollsmoother-container">
         <!-- Start Hero -->
         <div class="cs_height_130 cs_height_lg_60"></div>
-         <div class="container" style="    max-width: 100%; padding: 0 100px;">
-            <div class="row">
-               <div class="col-md-9">
+        <div class="cs_height_130 cs_height_lg_60 khajavali"></div>
+             <div class="container vali">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="container-box__right">
+                            <div class="video-preview-wrapper" id="videoWrapper" style="position: relative;">
+                                <!-- Thumbnail Image -->
+                                <img src="assets/img/bannermain.png" alt="Video Thumbnail" class="v" id="videoThumbnail" />
 
-            <div class="container-box__right">
-                <div class="video-preview-wrapper" id="videoWrapper">
-                    
-                    <img src="assets/img/bannermain.png" alt="Video Thumbnail" class="v" id="videoThumbnail" />
+                                <!-- Blurred overlay (no content inside) -->
+                                <div class="video-overlay" id="videoOverlay"></div>
 
-                    <div class="video-overlay" id="videoOverlay">
-                    <button class="play-button" id="playBtn">
-                        <img src="assets/img/vector.png" alt="" class="play__icon">
-                    </button>
-                    </div>
+                                <!-- ✅ Play Button OUTSIDE blur and ABOVE other elements -->
+                                <button class="play-button" id="playBtn" style="position: absolute; z-index: 3;">
+                                    <img src="assets/img/vector.png" alt="" class="play__icon" />
+                                </button>
 
-                    <p class="video-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur beatae, maxime explicabo, sit culpa dicta quo inventore eos id voluptate ducimus expedita labore odit voluptas et porro tenetur. Iste?</p>
+                                <!-- Caption Section -->
+                                <div class="video-caption-wrapper" style="position: absolute; z-index: 3;">
+                                    <span class="banner_peraga">Software Development services</span>
+                                    <p class="video-caption">
+                                        Clever Ideas<br />
+                                        Clear Interfaces<br />
+                                        Clean Code.
+                                    </p>
+                                    <button class="video-caption-btn">Get in touch</button>
+                                </div>
 
-                    <button class="close-button" id="closeBtn">
-  <img src="assets/img/block-icon.png" alt="Close" />
-</button>
+                                <!-- Close Button -->
+                                <button class="close-button" id="closeBtn" style="position: absolute; top: 10px; right: 10px; z-index: 3;">
+                                    <img src="assets/img/into.png" alt="" width="20px" />
+                                </button>
 
-
-                    <video class="video-player__main" id="mainVideo" preload="metadata" controls>
-                    <source src="assets/vedio/hoempage__vedio.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                    </video>
-
-            </div>
-            </div>
-
-    
-
-
-              </div>
-               <div class="col-md-3">
-                   <div>
-                        <img src="assets/img/bannerlett.png" alt="" srcset="" width="100%" class="imagelet__hoem">
-                        <div class="oru__lestprojuct">
-                          <div>
-                                <p class="home__pera_our">Our Lastest Project</p>
-                                <p class="sencd__pere">Ara Skin Clinic</p>
-                            </div>
-                            <div class="arrow-circle">
-                                <img src="assets/img/arrow.png" alt="Arrow Icon" />
+                                <!-- Video Player -->
+                                <video class="video-player__main" id="mainVideo" preload="metadata" controls style="width: 100%; object-fit: cover;">
+                                    <source src="assets/vedio/hoempage__vedio.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                    <!-- Stop Button -->
+                                    <button class="stop-button" id="stopVideoBtn" style="position: absolute; bottom: 20px; right: 20px; z-index: 3; display: none;">
+                                        <img src="assets/img/into.png" alt="Stop" width="50px" />
+                                    </button>
+                                </video>
+                                <!-- New Video Close Icon -->
                             </div>
                         </div>
                     </div>
-               
-              </div>
+                     <div class="cs_height_130 cs_height_lg_60 khajavali none__value"></div>
+                    <div class="col-md-3">
+                        <div>
+                            <img src="assets/img/bannerlett.png" alt="" srcset="" width="100%" class="imagelet__hoem" />
+                            <div class="oru__lestprojuct">
+                                <div>
+                                    <p class="home__pera_our">Our Lastest Project</p>
+                                    <p class="sencd__pere">Ara Skin Clinic</p>
+                                </div>
+                                <a href="https://araskinclinic.com/" target="_blank" rel="noopener noreferrer">
+                                    <div class="arrow-circle">
+                                        <img src="assets/img/arrow.png" alt="Arrow Icon" />
+                                    </div>
+                                </a>
 
-            </div>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+
 
         <!-- End Hero -->
         <div class="cs_height_130 cs_height_lg_60"></div>
-        <div class="container" style="    max-width: 100%; padding: 0 100px;">
-            <h3 class="Our__clints">Our clints</h3>
+        <div class="container vali">
+             <div class="cs_section_heading cs_style_1 cs_type_1 cs_color_1">
+                    <div class="cs_section_heading_text">
+                        <div class="cs_section_subtitle anim_div_ShowZoom" style="color: #101010;">
+                            Our Services
+                        </div>
+                        
+                    </div>
+                    
+                  
+                </div>
+                
         <!-- Start Moving Text -->
         </div>
         
         <div class="cs_moving_section_wrap cs_bold">
             
             <div class="cs_moving_section_in">
-               <div class="container">
-                 
-
-               </div>
+             
                 
-    <div class="cs_moving_section cs_stroke_text">
-       
-        <div class="logo-row">
-        <img src="assets/img/vsh.png" alt="">
-        <img src="assets/img/araa.png" alt="">
-        <img src="assets/img/ngr.png" alt="">
-        <img src="assets/img/pronu.png" alt="">
-        <img src="assets/img/silion.png" alt="">
+                <div class="cs_moving_section cs_stroke_text">
+                
+                    <div class="logo-row">
+                    <img src="assets/img/vsh.png" alt="">
+                    <img src="assets/img/araa.png" alt="">
+                    <img src="assets/img/ngr.png" alt="">
+                    <img src="assets/img/pronu.png" alt="">
+                    <img src="assets/img/silion.png" alt="">
+                    </div>
+                </div>
+                <div class="cs_moving_section cs_stroke_text">
+                        <div class="logo-row">
+                            <img src="assets/img/vsh.png" alt="">
+                            <img src="assets/img/araa.png" alt="">
+                            <img src="assets/img/ngr.png" alt="">
+                            <img src="assets/img/pronu.png" alt="">
+                            <img src="assets/img/silion.png" alt="">
+                       </div>
+                
+          </div>
         </div>
-    </div>
-     <div class="cs_moving_section cs_stroke_text">
-             <div class="logo-row">
-                <img src="assets/img/vsh.png" alt="">
-                <img src="assets/img/araa.png" alt="">
-                <img src="assets/img/ngr.png" alt="">
-                <img src="assets/img/pronu.png" alt="">
-                <img src="assets/img/silion.png" alt="">
-            </div>
-       
-    </div>
-</div>
         </div>
         <!-- End Moving Text -->
         
