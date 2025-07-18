@@ -1239,3 +1239,20 @@ stopVideoBtn.addEventListener('click', async () => {
   });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html'; // Get current page (e.g., 'about.html')
+  const navLinks = document.querySelectorAll('.cs_nav_list a');
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    const span = link.querySelector('.under');
+
+    // Remove active class from all links
+    span.classList.remove('active');
+
+    // Add active class to the link matching the current page
+    if (linkPage === currentPage) {
+      span.classList.add('active');
+    }
+  });
+});

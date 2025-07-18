@@ -51,37 +51,53 @@
                         </a>
                     </div>
                     <div class="cs_main_header_right">
-                        <div class="cs_nav cs_medium">
-                            <ul class="cs_nav_list">
-                                        <li>
-                                            <a href="index.html"><span class="under active">Home</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="about.html"><span class="under">About</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="service.html"><span class="under">Services</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="portfolio.html"><span class="under">Portfolio</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html"><span class="under">Blog</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html"><span class="under">Contact</span></a>
-                                        </li>
-                            </ul>
+  <div class="cs_nav cs_medium">
+    <ul class="cs_nav_list">
+      <li>
+        <a href="index.html"><span class="under active">Home</span></a>
+      </li>
+      <li>
+        <a href="about.html"><span class="under">About</span></a>
+      </li>
+      <li>
+        <a href="service.html"><span class="under">Services</span></a>
+      </li>
+      <li>
+        <a href="portfolio.html"><span class="under">Portfolio</span></a>
+      </li>
+      <li>
+        <a href="blog.html"><span class="under">Blog</span></a>
+      </li>
+      <li>
+        <a href="contact.html"><span class="under">Contact</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-                       </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('.cs_nav_list a');
 
-                    </div>
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        const span = link.querySelector('.under');
+        span.classList.remove('active');
+        if (linkPage === currentPage) {
+          span.classList.add('active');
+        }
+      });
+    });
+  </script>
                     <div class="cs_main_header_right">   
-                        <div class="cs_toolbox">
-                            <button class="Get__on_touch_button">
-                                Get in touch
-                            </button>
-                        </div>
+                       <div class="cs_toolbox">
+                                <a href="contact.html">
+                                    <button class="Get__on_touch_button">
+                                        Get in touch
+                                    </button>
+                                </a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -1647,5 +1663,6 @@
 </body>
 
 
-<!-- Mirrored from vixan-theme-march.vercel.app/vixan_main/startup-agency.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Feb 2025 11:18:34 GMT -->
+<!-- Page: Home | Website: https://appycode.in | Last updated: 11 July 2025 -->
+
 </html>
