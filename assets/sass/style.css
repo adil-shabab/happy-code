@@ -248,7 +248,121 @@ ol {
    background-color: black;
    color: white;
 }
-.mission-vision-section {
+
+
+.ultimate-mission-section {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  overflow: hidden;
+}
+
+.skew-image-wrapper {
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.skewed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none !important;
+}
+
+/* MATCHING CLIP FOR RIGHT SIDE */
+.skew-content-wrapper {
+  padding: 1rem 3rem;
+  position: relative;
+}
+
+/* Cards - same */
+.glass-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px #00000030;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+}
+
+.glass-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #fcaa1b, #ffc35b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Icon Glow */
+.icon-glow {
+  width: 60px;
+  height: 60px;
+  background: #fcaa1b;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 18px #fcaa1b88, 0 0 36px #fcaa1b33;
+}
+
+.mouse-glow::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, #fcaa1b33 10%, transparent 80%);
+  border-radius: 50%;
+  top: -30%;
+  left: -30%;
+  z-index: 0;
+  transition: transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skewed-img {
+    clip-path: none;
+  }
+
+  .skew-content-wrapper {
+    clip-path: none;
+    padding: 2rem 1.5rem;
+  }
+
+  .glass-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* .mission-vision-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
@@ -307,14 +421,14 @@ ol {
   margin-bottom: 10px;
 }
 .section-title {
-  font-size: 28px; /* Ensure a readable size */
+  font-size: 28px; 
   font-weight: bold;
-  color: #333; /* Ensure text color is visible */
+  color: #333; 
   margin-bottom: 10px;
   text-align: left;
-  display: block; /* Ensure it's not hidden */
-  position: relative; /* Reset any unwanted positioning */
-  z-index: 10; /* Ensure it's above other elements */
+  display: block; 
+  position: relative; 
+  z-index: 10; 
 }
 
 .section-description {
@@ -370,7 +484,7 @@ ol {
 .vali{
   max-width: 100%; 
   padding: 0 100px;
-}
+} */
 
 /* Portfolio Section */
 .portfolio-section {
@@ -1772,6 +1886,195 @@ label {
 .odometer.odometer-auto-theme .odometer-value,
 .odometer.odometer-theme-default .odometer-value {
   text-align: center;
+}
+
+/* testimonial css */
+
+.carousal {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.carousal .cs_section_title{
+  font-weight: 900;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.swiper {
+  padding: 3rem 0;
+  padding-bottom: 2rem !important;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+  padding: 3rem 1.5rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  text-align: center;
+  overflow: visible !important;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  /* background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent); */
+  /* transform: skewX(-25deg); */
+  /* transition: 0.7s ease-in-out; */
+}
+
+.testimonial-card:hover::before {
+  left: 130%;
+}
+
+.profile-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fcaa1b;
+  border-radius: 50%;
+  border: 6px solid white;
+  padding: 6px;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-content {
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #fcaa1b;
+  margin-bottom: 1rem;
+}
+
+.review {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 0 1rem;
+  font-style: italic;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fcaa1b;
+  font-size: 1.5rem;
+  top: 45%;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #e59916;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-width: 100%;
+  }
+}
+
+/* tech insights css */
+
+.cs_slider {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.glide__slide {
+  padding: 0 10px;
+  height: 100%;       /* ensures full fill */
+  box-sizing: border-box;
+  margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.cs_post.cs_style_1 {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;              /* make it fill the slide */
+  min-height: 400px !important;         /* or set this for consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cs_post.cs_style_1:hover {
+  transform: translateY(-5px);
+}
+
+.cs_post_thumb img.img-blog {
+  width: 100%;
+  height: 250px;           /* fixed height to unify all */
+  object-fit: cover;
+  display: block;
+}
+
+.cs_post_info {
+  padding: 1rem;
+}
+
+.cs_post_info p {
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.cs_post_title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.cs_post_title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs_post_info p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.3rem;
 }
 
 /* start cs_animison cricle */
@@ -4337,7 +4640,7 @@ label {
   margin-bottom: 50px;
 }
 .cs_footer_info a {
-  font-size: 45px;
+  font-size: 2rem;
   display: inline-block;
   color: #fff;
   font-weight: 900;
