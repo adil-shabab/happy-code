@@ -47,9 +47,11 @@
 1. Basic Color Variable
 ----------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;900&amp;family=Kanit:wght@400;500;600;700&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 :root {
-  --body-font-family: "Kanit", sans-serif;
-  --heading-font-family: "Inter Tight", sans-serif;
+  --body-font-family: sans-serif !important;
+  --heading-font-family: sans-serif !important;
   --accent-color: #ff6b00;
   --body-color: #454545;
   --heading-color: #101010;
@@ -59,6 +61,9 @@
   --common-color-white: #ffffff;
   --common-color-black: #000000;
   --drak-color: #ffffff;
+}
+body{
+   font-family: "Cairo", sans-serif !important;
 }
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 h1,h2,h3,h4,h5,h6{
@@ -341,6 +346,21 @@ ol {
       object-fit: cover;
 
     }
+    
+.play-button {
+    position: absolute;
+    bottom: 40px;
+    right: 17px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    padding: 14px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+    
 
 }
 .khajavali{
@@ -699,6 +719,21 @@ input,
 textarea {
   color: --primary-color;
   transition: all 0.3s ease;
+}
+.video-player__main {
+    display: none; /* Hide video initially */
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent blur effect */
+    z-index: 2;
+}
+.video-caption-wrapper {
+    z-index: 3; /* Ensure caption stays above overlay */
 }
 
 /*--------------------------------------------------------------
@@ -2940,7 +2975,7 @@ label {
   top: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: 0.15s;
+  transition: 0.60px;
   z-index: 999;
   mix-blend-mode: normal;
 }
@@ -2995,13 +3030,13 @@ label {
   transform-origin: left;
 }
 
-.cs_toggle {
+.kahja {
   position: relative;
   font-size: 18px;
   cursor: pointer;
   z-index: 10000;
 }
-.cs_toggle .setting_mode {
+.kahja .mode {
   position: fixed;
   right: 0;
   top: 40%;
@@ -3009,19 +3044,19 @@ label {
   transform: translateY(-50%);
   transition: all 0.2s;
 }
-.cs_toggle .setting_mode button {
+.kahja .mode button {
   border: none;
   background-color: #2b2b2f;
   padding: 10px;
 }
-.cs_toggle .setting_mode button img {
+.kahja .mode button img {
   width: 100%;
   height: 30px;
 }
-.cs_toggle .setting_mode #clecel {
+.kahja .mode #clecel {
   display: none;
 }
-.cs_toggle .cs_mode_btn {
+.kahja .cs_mode_btn {
   position: fixed;
   right: -120px;
   top: 40%;
@@ -3029,13 +3064,13 @@ label {
   transition: all 0.3s;
   mix-blend-mode: exclusion;
 }
-.cs_toggle .cs_mode_btn button {
+.kahja .cs_mode_btn button {
   border: none;
   background-color: #2b2b2f;
   color: rgba(143, 143, 143, 0.9333333333);
   padding: 10px;
 }
-.cs_toggle .cs_mode_btn .active {
+.kahja .cs_mode_btn .active {
   color: #fff;
 }
 
@@ -4131,16 +4166,16 @@ label {
     right: 0px;
     margin-top: -13px;
   }
-  .cs_toggle_active span {
+  .kahja_active span {
     background-color: rgba(0, 0, 0, 0);
     transition-delay: 0.2s;
   }
-  .cs_toggle_active span:before {
+  .kahja_active span:before {
     margin-top: 0;
     transform: rotate(45deg);
     transition-delay: 0s, 0.2s;
   }
-  .cs_toggle_active span:after {
+  .kahja_active span:after {
     margin-top: 0;
     transform: rotate(-45deg);
     transition-delay: 0s, 0.2s;
@@ -7161,6 +7196,17 @@ label {
   .cs_service_exploring .cs_service_exploring_2 .cs_service_exploring_img {
     width: 100%;
   }
+  .image__bigicon {
+    position: absolute;
+    right: -7%;
+    width: 100px;
+}
+.imagein__bigcon1 {
+    position: absolute;
+    left: -7%;
+    top: 95% !important;
+    width: 100px;
+}
 }
 /*--------------------------------------------------------------
   29. Work Process
@@ -7575,17 +7621,51 @@ label {
 .play-button:hover {
   background: rgba(255, 255, 255, 1);
 }
-
-.play-button {
-    position: absolute;
-    z-index: 3;
-    pointer-events: none;
-    /* background: none; */
-    /* border: none; */
-    cursor: none;
-    /* display: none; */
-    transition: all 0.2s ease;
+.image__bigicon{
+  position: absolute;
+      right: -7%;
 }
+.image__bigicon1{
+  position: absolute;
+      right: -7%;
+}
+.imagein__bigcon1{
+  position: absolute;
+    left: -7%;
+    top: 43%;
+}
+
+.challange__bx ul{
+  padding-left: 0px !important;
+  list-style: none;
+}
+.challange__bx ul li{
+  list-style: none;
+  padding-left: 22px;
+  position: relative;
+      color: #404040;
+    font-family: Cairo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+        padding-bottom: 30px;
+}
+.challange__bx ul li::before{
+ content: '';
+    background: url(../img/icon.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    /* transform: translate(0, -50%); */
+    z-index: 111;
+    width: 15px;
+    height: 15px;
+}
+
 .video-preview-wrapper.hide-cursor {
   cursor: none;
 }
@@ -7603,10 +7683,84 @@ label {
   font-size: 16px;
   font-weight: 500;
 }
+#fullscreenVideoWrapper {
+  transition: opacity 0.3s ease-in-out;
+}
 
+.coloring{
+      font-size: 24px;
+}
+.main__box__service{
+  border-radius: 10px;
+background: #FFF;
+}
+.main__div{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+.heading__styling{
+  color: #000;
 
+font-family: Cairo;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0px;
 
+  
 
+}
+
+.secod__box_-destuilaspage{
+      display: flex;
+  
+    padding: 64px 48px 34px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 12px;
+border: 1px solid #DCE3ED;
+background: #F9FBFE;
+
+}
+
+.heading__styling__pera{
+  color: #6D6D6D;
+
+font-family: Cairo;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 10px;
+margin: 0px;
+
+}
+
+.custom-heading {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 47.96px;
+  line-height: 56.53px;
+  letter-spacing: 0.86px;
+  display: flex;
+  align-items: center; /* For vertical alignment */
+  justify-content: start; /* Or center, depending on use */
+  margin: 0;
+}
+.custom-paragraph {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 56.53px;
+  letter-spacing: 0.86px;
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  margin: 0;
+}
 
 .close-button {
   display: none;
@@ -7622,6 +7776,44 @@ label {
   z-index: 10;
   transition: all 0.3s ease;
 }
+/* Add this in your CSS file or inside a <style> tag */
+@keyframes cinematicReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+@keyframes cinematicExit {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    filter: blur(4px);
+  }
+}
+
+.fullscreen-exit {
+  animation: cinematicExit 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.fullscreen-animate {
+  animation: cinematicReveal 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px); /* optional for background blur */
+}
+
 
 .video-preview-wrapper.fullscreen .close-button {
   display: block;
@@ -7629,6 +7821,35 @@ label {
 .video-preview-wrapper {
   position: relative;
 }
+.video-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+      border-radius: 30px;
+}
+
+.video-bg-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.video-blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0px);
+  background-color: rgba(0, 0, 0, 0.2); /* optional */
+  z-index: 2;
+}
+
 .imagelet__hoem{
   width: 100%;
   height: 353px;
@@ -7639,7 +7860,7 @@ label {
   object-fit: cover;
 }
 .play__icon{
-  margin: 0px;
+     margin: 0px 0px 0px 5px;
 }
 
 
@@ -7730,3 +7951,149 @@ label {
 .under.active::after {
   width: 50%;
 }
+
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hover-img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-hover:hover .hover-img {
+    transform: scale(1.05);
+}
+.card-hover {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+#whatsappScrollBtn {
+position: fixed;
+    bottom: 4%;
+    right: 5%;
+    /* border-radius: 50px; */
+    /* padding: 12px 20px; */
+    display: none;
+    align-items: center;
+    /* gap: 10px; */
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+
+.title {
+    color: #333;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-pic {
+    border-radius: 50%;
+}
+
+.patient-name {
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.stars {
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.review {
+    color: #444;
+    line-height: 1.5;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #0056b3;
+}
+

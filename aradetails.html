@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <!-- Page: Home | Website: https://appycode.in | Last updated: 11 July 2025 -->
+
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <!-- /Added by HTTrack -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Thememarch" />
+        <!-- Favicon Icon -->
+        <link rel="icon" href="assets/img/Appycode-logo-favi.png" />
+        <!-- Site Title -->
+        <title>Our Portfolio | Healthcare IT Solutions & Digital Innovations</title>
+        <meta name="description" content="Explore Appycode’s portfolio showcasing IT solutions for the healthcare industry. From web and app development to custom software, we help healthcare businesses with digital transformation." />
+        <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+        <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+        <link rel="stylesheet" href="assets/sass/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Cursor Animation -->
+        <div class="cs_cursor_1"></div>
+        <div class="cs_cursor_2"></div>
+        <!-- Preloader -->
+        <div class="custom-preloader" id="preloader">
+            <div class="preloader-inner">
+                <svg width="500" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="60" text-anchor="middle" id="animated-char">{</text>
+                </svg>
+                <div class="loading-lines" id="loading-text">Loading...</div>
+            </div>
+        </div>
+
+        <style>
+            body {
+                margin: 0;
+                background-color: white;
+                font-family: "Courier New", monospace;
+                color: #000;
+            }
+            body {
+                font-family: "Cairo", sans-serif;
+                background-color: #f5f9fc;
+                color: #222;
+                margin: 0;
+                padding: 40px 20px;
+            }
+            .heading-with-line {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                padding-bottom: 20px; /* space between text and line */
+            }
+
+            .heading-with-line h4 {
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            .heading-with-line .line {
+                flex-grow: 1;
+                border-bottom: 1px solid #dce3ed;
+            }
+
+            .project-case-study {
+                max-width: 1200px;
+                margin: auto;
+
+                padding: 40px;
+                background: #fff;
+                border-radius: 12px;
+            }
+            .span__contet {
+                font-weight: 700;
+                color: #404040;
+            }
+
+            .case-heading {
+                font-size: 65.244px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .info-grid {
+                display: flex;
+                flex-wrap: wrap;
+
+                height: 256px;
+                padding: 24px 94px 24px 48px;
+                align-items: center;
+                flex-shrink: 0;
+                border: 1px solid #dce3ed;
+                background: #f9fbfe;
+                margin-bottom: 30px;
+                margin-bottom: 30px;
+                border-radius: 12px;
+                border: 1px solid #dce3ed;
+                background: #f9fbfe;
+            }
+
+            .info-section {
+                flex: 1;
+            }
+            .box__right__border {
+                border-right: 1px solid #dce3ed;
+                margin: 13px;
+            }
+
+            .info-section h4 {
+                color: #404040;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 43.2px;
+            }
+
+            .info-section p,
+            .info-section li {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 27px;
+            }
+
+            .info-section ul {
+                padding-left: 18px;
+            }
+
+            .project-image-preview {
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            .project-image-preview img {
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
+                border: 1px solid #dce3ed;
+                padding: 20px;
+            }
+            .visit-btn {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .secod__box_-destuilaspage {
+                    display: flex;
+                    padding: 17px 31px 24px 11px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 24px;
+                    border-radius: 12px;
+                    border: 1px solid #dce3ed;
+                    background: #f9fbfe;
+                }
+            }
+            .info-grid {
+                display: flex;
+                flex-wrap: wrap;
+                /* height: 256px; */
+
+                align-items: center;
+                flex-shrink: 0;
+                border: 1px solid #dce3ed;
+                background: #f9fbfe;
+                margin-bottom: 30px;
+                margin-bottom: 30px;
+                border-radius: 12px;
+                border: 1px solid #dce3ed;
+                background: #f9fbfe;
+                height: auto !important;
+            }
+
+            .custom-preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                flex-direction: column;
+            }
+
+            .preloader-inner {
+                text-align: center;
+            }
+
+            svg text {
+                font-size: 64px;
+                fill: #ff6b00;
+                transition: opacity 0.2s ease;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            }
+
+            .loading-lines {
+                margin-top: 20px;
+                font-size: 18px;
+                text-align: center;
+                opacity: 0.85;
+                height: 1.2em;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 2px solid black;
+                animation: blinkCursor 1s step-end infinite;
+                color: black;
+            }
+
+            @keyframes blinkCursor {
+                0%,
+                100% {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: black;
+                }
+            }
+        </style>
+
+        <script>
+            const symbols = ["{", "<", "/", ">", "}", ";"];
+            const messages = ["Compiling creativity...", "Building awesome things...", "Writing clean code...", "Loading awesomeness...", "Deploying imagination...", "Debugging the matrix..."];
+
+            const textChar = document.getElementById("animated-char");
+            const loadingText = document.getElementById("loading-text");
+
+            let symbolIndex = 0;
+            let messageIndex = 0;
+
+            // Animate symbols every 200ms
+            const symbolInterval = setInterval(() => {
+                textChar.style.opacity = 0;
+                setTimeout(() => {
+                    textChar.textContent = symbols[symbolIndex];
+                    textChar.style.opacity = 1;
+                    symbolIndex = (symbolIndex + 1) % symbols.length;
+                }, 100);
+            }, 300);
+
+            // Change message every 600ms
+            const messageInterval = setInterval(() => {
+                loadingText.textContent = messages[messageIndex];
+                messageIndex = (messageIndex + 1) % messages.length;
+            }, 600);
+
+            // Hide preloader after page load
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    clearInterval(symbolInterval);
+                    clearInterval(messageInterval);
+                    document.getElementById("preloader").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                    document.body.style.overflow = "auto";
+                }, 2000); // Change delay as needed
+            });
+        </script>
+
+        <!-- Start Header Section -->
+        <header class="cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width">
+            <div class="cs_main_header">
+                <div class="container">
+                    <div class="cs_main_header_in">
+                        <div class="cs_main_header_left">
+                            <a class="cs_site_branding logo-dark" href="index.html">
+                                <img src="assets/img/Appycode-logo.png" alt="Logo" />
+                            </a>
+                            <a class="cs_site_branding logo-white" href="index.html">
+                                <img src="assets/img/Appycode-logo.png" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="cs_main_header_right">
+                            <div class="cs_nav cs_medium">
+                                <ul class="cs_nav_list">
+                                    <li>
+                                        <a href="index.html"><span class="under active">Home</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html"><span class="under">About</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"><span class="under">Services</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio.html"><span class="under">Portfolio</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html"><span class="under">Blog</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"><span class="under">Contact</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const currentPage = window.location.pathname.split("/").pop() || "index.html";
+                                const navLinks = document.querySelectorAll(".cs_nav_list a");
+
+                                navLinks.forEach((link) => {
+                                    const linkPage = link.getAttribute("href");
+                                    const span = link.querySelector(".under");
+                                    span.classList.remove("active");
+                                    if (linkPage === currentPage) {
+                                        span.classList.add("active");
+                                    }
+                                });
+                            });
+                        </script>
+                        <div class="cs_main_header_right">
+                            <div class="cs_toolbox">
+                                <a href="contact.html">
+                                    <button class="Get__on_touch_button">
+                                        Get in touch
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- menu -->
+        <div class="cs_side_header">
+            <button class="cs_close"></button>
+            <div class="cs_side_header_overlay"></div>
+            <div class="cs_side_header_in">
+                <a class="cs_site_branding" href="index.html">
+                    <img src="assets/img/Appycode-logo(White).png" alt="Logo" />
+                </a>
+                <div class="row align-items-end">
+                    <div class="col-6">
+                        <div class="cs_box_one">
+                            <div class="cs_nav_black_section cs_font_changes">
+                                <ul>
+                                    <li class="">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="about.html">About</a>
+                                    </li>
+
+                                    <li class="">
+                                        <a href="service.html">Services</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="contact.html">contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 offset-1">
+                        <div class="cs_box_two">
+                            <div>
+                                <p>
+                                    <svg width="14" height="18" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 0.0195312C3.14027 0.0195312 0 3.01027 0 6.68621C0 7.78973 0.289693 8.88387 0.840408 9.85434L6.6172 17.8047C6.69411 17.9373 6.84065 18.0195 7 18.0195C7.15935 18.0195 7.30589 17.9373 7.3828 17.8047L13.1617 9.85105C13.7103 8.88387 14 7.78969 14 6.68617C14 3.01027 10.8597 0.0195312 7 0.0195312ZM7 10.0195C5.07014 10.0195 3.50002 8.52418 3.50002 6.68621C3.50002 4.84824 5.07014 3.35289 7 3.35289C8.92986 3.35289 10.5 4.84824 10.5 6.68621C10.5 8.52418 8.92986 10.0195 7 10.0195Z"
+                                            fill="white"
+                                        ></path>
+                                    </svg>
+                                    <span class="ms-2">204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka<br /> </span>
+                                </p>
+
+                                <h4 class="cs_phone_number">
+                                    <a href="tel:+91 99669 92122">
+                                        <svg width="35" height="35" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.6837 11.9266C13.0957 11.3461 12.3616 11.3461 11.7773 11.9266C11.3316 12.3686 10.8859 12.8105 10.4477 13.26C10.3278 13.3836 10.2267 13.4098 10.0806 13.3274C9.79225 13.1701 9.48513 13.0427 9.20797 12.8704C7.91581 12.0577 6.8334 11.0127 5.87458 9.83668C5.39891 9.2524 4.97568 8.62692 4.6798 7.92279C4.61987 7.78046 4.63111 7.68683 4.74721 7.57072C5.19292 7.14 5.62738 6.69805 6.06559 6.25609C6.67609 5.64185 6.67609 4.92273 6.06185 4.30474C5.71353 3.95268 5.3652 3.6081 5.01688 3.25604C4.65733 2.89648 4.30151 2.53318 3.93821 2.17736C3.35018 1.60432 2.61609 1.60432 2.03181 2.18111C1.58236 2.62306 1.15164 3.07626 0.694705 3.51072C0.271476 3.91148 0.0579884 4.40212 0.0130438 4.97517C-0.0581186 5.90777 0.17035 6.78794 0.492454 7.64563C1.15164 9.42095 2.15541 10.9978 3.37266 12.4435C5.01688 14.3986 6.97947 15.9454 9.27539 17.0615C10.3091 17.5634 11.3803 17.9492 12.5451 18.0129C13.3466 18.0578 14.0433 17.8556 14.6013 17.2301C14.9834 16.8031 15.4141 16.4136 15.8186 16.0053C16.4178 15.3986 16.4216 14.6645 15.8261 14.0652C15.1145 13.3499 14.3991 12.6382 13.6837 11.9266Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M12.9672 8.93825L14.3493 8.70229C14.132 7.4326 13.5328 6.28277 12.6227 5.36889C11.6601 4.40633 10.4428 3.79957 9.10199 3.6123L8.90723 5.00184C9.9447 5.14791 10.8885 5.61609 11.6339 6.36142C12.338 7.06555 12.7987 7.95696 12.9672 8.93825Z"
+                                                fill="white"
+                                            ></path>
+                                            <path
+                                                d="M15.1294 2.93344C13.5338 1.33791 11.5151 0.330398 9.28656 0.0195312L9.0918 1.40907C11.0169 1.67874 12.7623 2.55141 14.1406 3.92597C15.4477 5.23311 16.3054 6.88483 16.6163 8.70134L17.9983 8.46538C17.635 6.36047 16.6425 4.45033 15.1294 2.93344Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                       <a href="tel:+919966992122" class="text-decoration-none text-dark d-flex align-items-center">
+    <i class="bi bi-telephone-fill"></i>
+    <span class="ms-2">+91 99669 92122</span>
+</a>
+
+                                    </a>
+                                </h4>
+
+                                <ul class="cs_social_link">
+                                    <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center" target="_blank">Instagram</a>
+                                    <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank" class="cs_center">Linkedin</a>
+                                    <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center" target="_blank">Facebook</a>
+                                </ul>
+
+                                <hr class="mt-2 me-5 mb-2" />
+                                <h2>
+                                    <a href="mailto:appycode2025@gmail.com" class="cs_primary_font cs_text_btn"><span class="cs_black">appycode2025@gmail.com</span></a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end menu -->
+        <!-- End Header Section -->
+        <div id="scrollsmoother-container">
+            <div class="cs_height_219 cs_height_lg_120"></div>
+
+            <!--Start Some Recent Project Titel  -->
+            <!-- Google Fonts -->
+            <div class="container">
+                <a href="portfolio.html" style="padding-right: 10px;"><span>Portfolio</span></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16" fill="none">
+                    <path d="M3.78125 0H0L7.5625 8L0 16H3.78125L11 8L3.78125 0Z" fill="#FFA130" style="margin: 10px;" />
+                </svg>
+                <span style="padding-left: 10px; font-weight: 700;">Ara Skin Clinic</span>
+            </div>
+
+            <div class="container">
+                <h2 class="case-heading"><img src="assets/img/araicon.png" alt="" srcset="" /></h2>
+
+                <div class="info-grid">
+                    <div class="col-md-6">
+                        <div class="info-section box__right__border">
+                            <h4>About Client</h4>
+                            <p>
+                                Ara Skin Clinic is a leading skin and aesthetic clinic in Bengaluru, specializing in dermatology, cosmetic treatments, and laser procedures. Known for its evidence-based approach and personalized care, Aras
+                                offers both clinical and aesthetic solutions delivered by experienced dermatologists.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-section box__right__border">
+                            <h4>Service</h4>
+                            <p>Dynamic Website</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-section">
+                            <h4>Website Link</h4>
+                            <p>
+                                <a href="https://araskinclinic.com/" target="_blank" class="visit-btn">
+                                    Araskinclinic.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secod__box_-destuilaspage challange__bx">
+                    <div class="info-section">
+                        <div class="heading-with-line">
+                            <h4>Challenge</h4>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                Ara Skin Clinic needed a digital identity that would reflect their expertise in both dermatology and advanced aesthetic treatments.
+                            </li>
+                            <li>
+                                Their main requirement was a clean, modern website that would establish instant credibility, clearly communicate the range of skin and cosmetic services, and offer easy appointment scheduling.
+                            </li>
+                            <li>
+                                The clinic wanted to educate potential clients through procedure-specific content while keeping the tone approachable and premium.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="heading-with-line">
+                            <h4>What we did</h4>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                We designed a visually calming and minimalistic interface that reflects the nature of skincare and wellness, using soft tones and clean typography.
+                            </li>
+                            <li>
+                                The homepage was structured to prioritize treatments, doctor expertise, and patient trust. Each service page features well-organized, SEO-optimized content for better discoverability on search engines.
+                            </li>
+                            <li>A sticky appointment button, floating contact options, and mobile-optimized design ensure the clinic is always within reach.</li>
+                            <li>
+                                The CMS backend enables the Aras team to add services and update blog content easily, making the site scalable as the clinic grows.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image-preview">
+                    <img src="assets/img/araimg.png" alt="VSH Hospital Website Preview" />
+                </div>
+            </div>
+
+            <!--End Some Recent Project Titel  -->
+            <div class="cs_height_50 cs_height_lg_25"></div>
+
+            <!-- Start Some Recent Project Show -->
+
+            <!-- End Some Recent Project Show -->
+            <!-- Start serction about your project. header-->
+            <section>
+                <div class="container">
+                    <div class="cs_learning_project">
+                        <div class="cs_section_heading cs_style_1">
+                            <div class="cs_section_heading_text">
+                                <h3 class="cs_section_title_3 anim_heading_title">
+                                    We Would Love to Provide IT Solutions for Your Business.
+                                </h3>
+                            </div>
+                            <div class="cs_section_heading_right cs_btn_anim">
+                                <a href="contact.html" class="cs_btn cs_style_1">
+                                    <span>Contact</span>
+                                    <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.5303 7.03033C18.8232 6.73744 18.8232 6.26256 18.5303 5.96967L13.7574 1.1967C13.4645 0.903806 12.9896 0.903806 12.6967 1.1967C12.4038 1.48959 12.4038 1.96447 12.6967 2.25736L16.9393 6.5L12.6967 10.7426C12.4038 11.0355 12.4038 11.5104 12.6967 11.8033C12.9896 12.0962 13.4645 12.0962 13.7574 11.8033L18.5303 7.03033ZM0 7.25H18V5.75H0V7.25Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start serction about your project. header-->
+            <!-- Start Footer -->
+            <footer class="cs_footer cs_primary_bg">
+                <div class="footer-section cs_height_lg_60"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="cs_footer_info">
+                                <img src="assets/img/Appycode-logo(White).png" alt="Logo" />
+                                <p>
+                                    Appycode is a Bangalore-based software development company dedicated to filling technological gaps in businesses with cutting-edge digital solutions.
+                                </p>
+                                <a href="mailto:appycode2025@gmail.com" class="cs_primary_font anim_text_upanddowns"><span>appycode2025@gmail.com</span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-1">
+                            <div class="cs_footer_social">
+                                <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center" target="_blank">Instagram</a>
+                                <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank" class="cs_center">Linkedin</a>
+                                <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center" target="_blank">Facebook</a>
+                            </div>
+                            <div class="cs_height_60 cs_height_lg_30"></div>
+                            <ul class="cs_footer_contact_list cs_mp0">
+                                <li>
+                                    <i>
+                                        <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 0.0195312C3.14027 0.0195312 0 3.01027 0 6.68621C0 7.78973 0.289693 8.88387 0.840408 9.85434L6.6172 17.8047C6.69411 17.9373 6.84065 18.0195 7 18.0195C7.15935 18.0195 7.30589 17.9373 7.3828 17.8047L13.1617
+                        9.85105C13.7103 8.88387 14 7.78969 14 6.68617C14 3.01027 10.8597 0.0195312 7 0.0195312ZM7 10.0195C5.07014 10.0195 3.50002 8.52418 3.50002 6.68621C3.50002 4.84824 5.07014 3.35289 7 3.35289C8.92986 3.35289 10.5 4.84824 10.5 6.68621C10.5
+                        8.52418 8.92986 10.0195 7 10.0195Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </i>
+                                    204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka
+                                </li>
+                                <li>
+                                    <i>
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.6837 11.9266C13.0957 11.3461 12.3616 11.3461 11.7773 11.9266C11.3316 12.3686 10.8859 12.8105 10.4477 13.26C10.3278 13.3836 10.2267 13.4098 10.0806 13.3274C9.79225 13.1701 9.48513 13.0427 9.20797 12.8704C7.91581
+                        12.0577 6.8334 11.0127 5.87458 9.83668C5.39891 9.2524 4.97568 8.62692 4.6798 7.92279C4.61987 7.78046 4.63111 7.68683 4.74721 7.57072C5.19292 7.14 5.62738 6.69805 6.06559 6.25609C6.67609 5.64185 6.67609 4.92273 6.06185 4.30474C5.71353
+                        3.95268 5.3652 3.6081 5.01688 3.25604C4.65733 2.89648 4.30151 2.53318 3.93821 2.17736C3.35018 1.60432 2.61609 1.60432 2.03181 2.18111C1.58236 2.62306 1.15164 3.07626 0.694705 3.51072C0.271476 3.91148 0.0579884 4.40212 0.0130438 4.97517C-0.0581186
+                        5.90777 0.17035 6.78794 0.492454 7.64563C1.15164 9.42095 2.15541 10.9978 3.37266 12.4435C5.01688 14.3986 6.97947 15.9454 9.27539 17.0615C10.3091 17.5634 11.3803 17.9492 12.5451 18.0129C13.3466 18.0578 14.0433 17.8556 14.6013 17.2301C14.9834
+                        16.8031 15.4141 16.4136 15.8186 16.0053C16.4178 15.3986 16.4216 14.6645 15.8261 14.0652C15.1145 13.3499 14.3991 12.6382 13.6837 11.9266Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M12.9672 8.93825L14.3493 8.70229C14.132 7.4326 13.5328 6.28277 12.6227 5.36889C11.6601 4.40633 10.4428 3.79957 9.10199 3.6123L8.90723 5.00184C9.9447 5.14791 10.8885 5.61609 11.6339 6.36142C12.338 7.06555 12.7987
+                        7.95696 12.9672 8.93825Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M15.1294 2.93344C13.5338 1.33791 11.5151 0.330398 9.28656 0.0195312L9.0918 1.40907C11.0169 1.67874 12.7623 2.55141 14.1406 3.92597C15.4477 5.23311 16.3054 6.88483 16.6163 8.70134L17.9983 8.46538C17.635 6.36047
+                        16.6425 4.45033 15.1294 2.93344Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                   </i>
+                                   <a href="tel:+919966992122" class="text-decoration-none  d-flex align-items-center">
+    <i class="bi bi-telephone-fill"></i>
+    <span class="">+91 99669 92122</span>
+</a>
+
+                                </li>
+                                <li>
+                                    <i>
+                                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.5043 8.78757C10.0565 9.08612 9.53631 9.24394 9 9.24394C8.46373 9.24394 7.94356 9.08612 7.49574 8.78757L0.119848 3.87016C0.0789258 3.84288 0.0390586 3.81444 0 3.78519V11.8429C0 12.7667 0.749707 13.4999 1.65702
+                        13.4999H16.3429C17.2668 13.4999 18 12.7502 18 11.8429V3.78516C17.9608 3.81448 17.9209 3.84299 17.8799 3.87031L10.5043 8.78757Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M0.704883 2.99347L8.08077 7.91091C8.35998 8.09707 8.67997 8.19012 8.99996 8.19012C9.31999 8.19012 9.64002 8.09703 9.91923 7.91091L17.2951 2.99347C17.7365 2.69939 18 2.2072 18 1.67599C18 0.762594 17.2569 0.0195312
+                        16.3435 0.0195312H1.65646C0.743098 0.0195664 0 0.762629 0 1.67687C0 2.2072 0.263531 2.69939 0.704883 2.99347Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </i>
+                                    <a href="mailto:appycode2025@gmail.com" class="text-decoration-none ">
+    <span class="ms-2">appycode2025@gmail.com</span>
+</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="last-footer-sestion cs_height_lg_60"></div>
+                    <ul class="cs_footer_nav">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="service.html">SERVICES</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT </a></li>
+                    </ul>
+                </div>
+                <div class="cs_copyright copy-right">
+                    <div>© Copyright 2025 - appycode All Rights Reserved.</div>
+                    <div>Designed & Developed by <a href="https://thinkb.agency/" target="_blank">thinkB</a></div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+
+        <span class="cs_scrollup">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor" />
+            </svg>
+        </span>
+        <!-- Script -->
+        <script src="assets/js/plugins/jquery-3.7.0.min.js"></script>
+        <script src="assets/js/plugins/isotope.pkg.min.js"></script>
+        <script src="assets/js/plugins/swiper.min.js"></script>
+        <script src="assets/js/plugins/lightgallery.min.js"></script>
+        <script src="assets/js/plugins/SplitText.min.js"></script>
+        <script src="assets/js/plugins/ScrollToPlugin.min.js"></script>
+        <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+        <script src="assets/js/plugins/ScrollSmoother.min.js"></script>
+        <script src="assets/js/plugins/gsap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!" target="_blank" id="whatsappScrollBtn" style="">
+            <img src="assets/img/square-whatsapp-brands-solid-full.svg" alt="WhatsApp Icon" style="width: 69px; height: 69px;" />
+        </a>
+
+
+<!-- Scripts -->
+
+<script>
+  const whatsappBtn = document.getElementById("whatsappScrollBtn");
+  let shownOnce = false;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200 && !shownOnce) {
+      whatsappBtn.style.display = "flex";
+      shownOnce = true;
+    }
+  });
+</script>
+
+    </body>
+
+    <!-- Page: Home | Website: https://appycode.in | Last updated: 11 July 2025 -->
+</html>

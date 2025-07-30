@@ -27,17 +27,116 @@
         <!-- Cursor Animation -->
         <div class="cs_cursor_1"></div>
         <div class="cs_cursor_2"></div>
+
         <!-- Preloader -->
-        <div class="cs_preloader cs_center">
-            <div class="cs_preloader_in">
-                <div class="loading loading05">
-                    <span> <img src="assets/img/Appycode-logo(White).png" alt="Logo" /></span>
-                </div>
+        <!-- Preloader -->
+        <!-- Preloader -->
+        <div class="custom-preloader" id="preloader">
+            <div class="preloader-inner">
+                <svg width="500" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="60" text-anchor="middle" id="animated-char">{</text>
+                </svg>
+                <div class="loading-lines" id="loading-text">Loading...</div>
             </div>
         </div>
 
+        <style>
+            body {
+                margin: 0;
+                background-color: white;
+                font-family: "Courier New", monospace;
+                color: #000;
+            }
+
+            .custom-preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                flex-direction: column;
+            }
+
+            .preloader-inner {
+                text-align: center;
+            }
+
+            svg text {
+                font-size: 64px;
+                fill: #ff6b00;
+                transition: opacity 0.2s ease;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            }
+
+            .loading-lines {
+                margin-top: 20px;
+                font-size: 18px;
+                text-align: center;
+                opacity: 0.85;
+                height: 1.2em;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 2px solid black;
+                animation: blinkCursor 1s step-end infinite;
+                color: black;
+            }
+
+            @keyframes blinkCursor {
+                0%,
+                100% {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: black;
+                }
+            }
+        </style>
+
+        <script>
+            const symbols = ["{", "<", "/", ">", "}", ";"];
+            const messages = ["Compiling creativity...", "Building awesome things...", "Writing clean code...", "Loading awesomeness...", "Deploying imagination...", "Debugging the matrix..."];
+
+            const textChar = document.getElementById("animated-char");
+            const loadingText = document.getElementById("loading-text");
+
+            let symbolIndex = 0;
+            let messageIndex = 0;
+
+            // Animate symbols every 200ms
+            const symbolInterval = setInterval(() => {
+                textChar.style.opacity = 0;
+                setTimeout(() => {
+                    textChar.textContent = symbols[symbolIndex];
+                    textChar.style.opacity = 1;
+                    symbolIndex = (symbolIndex + 1) % symbols.length;
+                }, 100);
+            }, 300);
+
+            // Change message every 600ms
+            const messageInterval = setInterval(() => {
+                loadingText.textContent = messages[messageIndex];
+                messageIndex = (messageIndex + 1) % messages.length;
+            }, 600);
+
+            // Hide preloader after page load
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    clearInterval(symbolInterval);
+                    clearInterval(messageInterval);
+                    document.getElementById("preloader").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                    document.body.style.overflow = "auto";
+                }, 2000); // Change delay as needed
+            });
+        </script>
+
         <!-- Start Header Section -->
-        <header class="cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width">
+        <header class="cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width" id="mainPage">
             <div class="cs_main_header">
                 <div class="container">
                     <div class="cs_main_header_in">
@@ -151,7 +250,10 @@
                                                 fill="white"
                                             ></path>
                                         </svg>
-                                        <span class="ms-2">+91 99669 92122</span>
+                                        <a href="tel:+919966992122" class="text-decoration-none text-dark d-flex align-items-center">
+                                            <i class="bi bi-telephone-fill"></i>
+                                            <span class="ms-2">+91 99669 92122</span>
+                                        </a>
                                     </a>
                                 </h4>
 
@@ -163,7 +265,7 @@
 
                                 <hr class="mt-2 me-5 mb-2" />
                                 <h2>
-                                    <a href="mailto:code@appycode.in" class="cs_primary_font cs_text_btn"><span class="cs_black">code@appycode.in</span></a>
+                                    <a href="mailto:appycode2025@gmail.com" class="cs_primary_font cs_text_btn"><span class="cs_black">appycode2025@gmail.com</span></a>
                                 </h2>
                             </div>
                         </div>
@@ -178,74 +280,82 @@
             <!-- Start Hero -->
             <div class="cs_height_130 cs_height_lg_60"></div>
             <div class="cs_height_130 cs_height_lg_60 khajavali"></div>
-          <div class="container vali">
+            <div class="container vali">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9" style="position: relative; padding: 0px;">
+                        <div class="video-bg-wrapper">
+                            <video src="assets/vedio/hoempage__vedio.mp4" autoplay loop muted></video>
+                            <div class="video-blur-overlay"></div>
+                        </div>
+
                         <div class="container-box__right">
                             <div class="video-preview-wrapper" id="videoWrapper" style="position: relative;">
                                 <!-- Thumbnail Image -->
-                                <img src="assets/img/bannermain.png" alt="Video Thumbnail" class="v" id="videoThumbnail">
+                                <img src="assets/img/bannermain.png" alt="Video Thumbnail" class="v" id="videoThumbnail" />
 
-                                <!-- Blurred overlay (no content inside) -->
-                                <div class="video-overlay" id="videoOverlay"></div>
-
-                                <!-- ✅ Play Button OUTSIDE blur and ABOVE other elements -->
-                                <button class="play-button" id="playBtn" style="position: absolute; z-index: 3;">
-                                    <img src="assets/img/vector.png" alt="" class="play__icon">
-                                </button>
+                                <!-- Blurred overlay -->
+                                <div class="video-overlay" id="videoOverlay">
+                                    <button class="play-button" id="playBtn" style="position: absolute; z-index: 3; height: 61px; width: 61px; display: flex; justify-content: center; align-items: center;">
+                                        <img src="assets/img/vector.png" alt="Play" class="play__icon" />
+                                    </button>
+                                </div>
 
                                 <!-- Caption Section -->
                                 <div class="video-caption-wrapper" style="position: absolute; z-index: 3;">
                                     <span class="banner_peraga">Software Development services</span>
                                     <h4 class="video-caption">
-                                        Clever Ideas<br>
-                                        Clear Interfaces<br>
+                                        Clever Ideas<br />
+                                        Clear Interfaces<br />
                                         Clean Code.
                                     </h4>
-                                    <a href="/contact">
+
+                                    <a href="contact.html">
                                         <button class="video-caption-btn">Get in touch</button>
                                     </a>
-
                                 </div>
 
                                 <!-- Close Button -->
                                 <button class="close-button" id="closeBtn" style="position: absolute; top: 10px; right: 10px; z-index: 3;">
-                                    <img src="assets/img/into.png" alt="" width="20px">
+                                    <img src="assets/img/into.png" alt="Close" width="20px" />
                                 </button>
 
                                 <!-- Video Player -->
-                                <video class="video-player__main" id="mainVideo" preload="metadata" controls="" style="width: 100%; object-fit: cover;">
-                                    <source src="assets/vedio/hoempage__vedio.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    <!-- Stop Button -->
-                                    <button class="stop-button" id="stopVideoBtn" style="position: absolute; bottom: 20px; right: 20px; z-index: 3; display: none;">
-                                        <img src="assets/img/into.png" alt="Stop" width="50px">
+                                <!-- Video Player -->
+
+                                <div id="fullscreenVideoWrapper" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: black; z-index: 9999;">
+                                    <video id="fullscreenVideo" src="assets/vedio/hoempage__vedio.mp4" controls loop style="width: 100%; height: 100%; object-fit: cover;"></video>
+
+                                    <button id="exitFullscreenBtn" style="position: absolute; top: 20px; right: 20px; background: none; border: none; z-index: 10000;">
+                                        <img src="assets/img/into.png" alt="Close" width="40px" />
                                     </button>
-                                </video>
-                                <!-- New Video Close Icon -->
+                                </div>
+
+                                <!-- Stop Button -->
+                                <button class="stop-button" id="stopVideoBtn" style="position: absolute; bottom: 20px; right: 20px; z-index: 3; display: none;">
+                                    <img src="assets/img/into.png" alt="Stop" width="50px" />
+                                </button>
                             </div>
                         </div>
                     </div>
-                     <div class="cs_height_130 cs_height_lg_60 khajavali none__value"></div>
+                    <div class="cs_height_130 cs_height_lg_60 khajavali none__value"></div>
                     <div class="col-md-3">
                         <div>
-                            <img src="assets/img/bannerlett.png" alt="" srcset="" width="100%" class="imagelet__hoem">
+                            <img src="assets/img/bannerlett.png" alt="" srcset="" width="100%" class="imagelet__hoem" />
                             <div class="oru__lestprojuct">
                                 <div>
-                                    <p class="home__pera_our">Our Lastest Project</p>
+                                    <p class="home__pera_our">Our Latest Project</p>
                                     <p class="sencd__pere">Ara Skin Clinic</p>
                                 </div>
-                                <a href="https://araskinclinic.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="aradetails.html" target="_blank" rel="noopener noreferrer">
                                     <div class="arrow-circle">
-                                        <img src="assets/img/arrow.png" alt="Arrow Icon">
+                                        <img src="assets/img/arrow.png" alt="Arrow Icon" />
                                     </div>
                                 </a>
-
                             </div>
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
 
             <!-- End Hero -->
             <div class="cs_height_130 cs_height_lg_60"></div>
@@ -484,115 +594,6 @@
             <!-- End Service Section -->
 
             <!-- Start Portfolio Section -->
-            <div class="cs_horizontal_scroll_wrap">
-                <div class="cs_height_145 cs_height_lg_60"></div>
-                <div class="container">
-                    <div class="cs_section_heading cs_style_1 cs_type_2">
-                        <div class="cs_section_heading_text">
-                            <div class="cs_section_subtitle anim_div_ShowZoom">
-                                Portfolio
-                            </div>
-                            <h2 class="cs_section_title anim_heading_title">
-                                Turning Ideas into Code, & Codes into Success
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="cs_height_100 cs_height_lg_60"></div>
-
-                    <!-- Portfolio Section -->
-
-                    <section class="portfolio-section">
-                        <div class="container">
-                            <div class="portfolio-grid">
-                                <!-- Portfolio Item 1 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev11.jpg" alt="AI Project" />
-                                    <div class="overlay">
-                                        <h3>AI-Powered Solutions</h3>
-                                        <p>Smart systems for business automation.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Portfolio Item 2 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev21.jpg" alt="Cloud Computing" />
-                                    <div class="overlay">
-                                        <h3>Cloud & DevOps</h3>
-                                        <p>Scalable cloud & automated deployment.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Portfolio Item 3 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev22.jpg" alt="Fintech" />
-                                    <div class="overlay">
-                                        <h3>Fintech & Payments</h3>
-                                        <p>Secure & efficient digital transactions.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Portfolio Item 4 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev5.jpg" alt="Cybersecurity" />
-                                    <div class="overlay">
-                                        <h3>Cybersecurity</h3>
-                                        <p>Advanced security for digital assets.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Portfolio Item 5 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev42.jpg" alt="Blockchain" />
-                                    <div class="overlay">
-                                        <h3>Blockchain & Web3</h3>
-                                        <p>Decentralized apps & smart contracts.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Portfolio Item 6 -->
-                                <div class="portfolio-item">
-                                    <img src="assets/img/blogdev62.jpg" alt="SaaS Development" />
-                                    <div class="overlay">
-                                        <h3>Enterprise SaaS</h3>
-                                        <p>Scalable software for businesses.</p>
-                                        <div class="cs_hero_btn_wrap">
-                                            <div class="cs_round_btn_wrap">
-                                                <a href="portfolio-details.html" class="cs_hero_btn btn-item cs-bton btn-bookan"><span></span> View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- Closing container -->
-            </div>
 
             <!-- End Portfolio Section -->
 
@@ -601,132 +602,38 @@
             <!-- End Awards Section -->
             <div class="cs_height_145 cs_height_lg_60"></div>
             <!-- Start Testimonial -->
-            <section class="cs_primary_bg cs_shape_wrap_2">
-                <div class="cs_shape_1">
-                    <svg width="1041" height="1005" viewBox="0 0 1041 1005" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle opacity="0.3" cx="538.5" cy="502.5" r="501.5" stroke="#454545" stroke-width="2" />
-                        <circle opacity="0.3" cx="501.5" cy="526.5" r="458.5" stroke="#454545" stroke-width="2" />
-                        <circle opacity="0.3" cx="453" cy="570" r="424" stroke="#454545" stroke-width="2" />
-                        <circle opacity="0.3" cx="396" cy="591" r="377" stroke="#454545" stroke-width="2" />
-                        <circle opacity="0.3" cx="330" cy="630" r="329" stroke="#454545" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="cs_shape_2">
-                    <svg width="149" height="149" viewBox="0 0 149 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.23">
-                            <path
-                                d="M54.7532 1.16162C47.1932 42.2265 41.0646 48.3548 0 55.9147C41.065 63.4746 47.1932 69.6029 54.7532 110.668C62.3131 69.6029 68.4414 63.4746 109.506 55.9147C68.4414 48.3548 62.3128 42.2265 54.7532 1.16162Z"
-                                fill="#454545"
-                            />
-                            <path
-                                d="M114.179 78.1968C109.372 104.312 105.474 108.21 79.3584 113.018C105.474 117.825 109.372 121.723 114.179 147.838C118.987 121.723 122.885 117.825 149 113.018C122.884 108.21 118.987 104.312 114.179 78.1968Z"
-                                fill="#454545"
-                            />
-                        </g>
-                    </svg>
-                </div>
-                <div class="cs_height_150 cs_height_lg_60"></div>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                            <div>
-                                <img src="assets/img/testimonial1.png" alt="" class="w-100" />
-                            </div>
-                        </div>
-                        <div class="col-lg-7 offset-lg-1">
-                            <div class="cs_testimonial cs_style_1 cs_color_1">
-                                <h2 class="cs_testimonial_title">
-                                    What Our Clients Have to Say About Our Work.
-                                </h2>
-                                <div class="cs_slider cs_slider_4">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="cs_testimonial_box">
-                                                <div class="cs_testimonial_quote_icon">
-                                                    <svg width="61" height="44" viewBox="0 0 61 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0 26.2855H12.9844L4.32807 43.4283H17.3125L25.9689 26.2855V0.571289H0V26.2855Z" fill="#FF6B00" />
-                                                        <path d="M34.625 0.571289V26.2855H47.6094L38.9531 43.4283H51.9375L60.5939 26.2855V0.571289H34.625Z" fill="#FF6B00" />
-                                                    </svg>
-                                                </div>
-                                                <blockquote class="cs_testimonial_text">
-                                                    They worked on my website project and it was very professionally done. The team understood the requirements and delivered it exactly how I wanted.
-                                                </blockquote>
-                                                <div class="cs_testimonial_meta">
-                                                    <div class="cs_testimonial_avatar">
-                                                        <img src="assets/img/user.png" alt="Avatar" />
-                                                    </div>
-                                                    <div class="cs_testimonial_meta_right">
-                                                        <h3 class="cs_testimonial_avatar_name">
-                                                            Thushara Anoop
-                                                        </h3>
-                                                        <div class="cs_testimonial_avatar_designation">
-                                                            From Bengaluru
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="cs_testimonial_box">
-                                                <div class="cs_testimonial_quote_icon">
-                                                    <svg width="61" height="44" viewBox="0 0 61 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0 26.2855H12.9844L4.32807 43.4283H17.3125L25.9689 26.2855V0.571289H0V26.2855Z" fill="#FF6B00" />
-                                                        <path d="M34.625 0.571289V26.2855H47.6094L38.9531 43.4283H51.9375L60.5939 26.2855V0.571289H34.625Z" fill="#FF6B00" />
-                                                    </svg>
-                                                </div>
-                                                <blockquote class="cs_testimonial_text">
-                                                    I wanted a website to be developed for my small business and thinkB team was very efficient in getting it done within the committed deadline.
-                                                </blockquote>
-                                                <div class="cs_testimonial_meta">
-                                                    <div class="cs_testimonial_avatar">
-                                                        <img src="assets/img/user.png" alt="Avatar" />
-                                                    </div>
-                                                    <div class="cs_testimonial_meta_right">
-                                                        <h3 class="cs_testimonial_avatar_name">
-                                                            Srikala P
-                                                        </h3>
-                                                        <div class="cs_testimonial_avatar_designation">
-                                                            From Bengaluru
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="cs_testimonial_box">
-                                                <div class="cs_testimonial_quote_icon">
-                                                    <svg width="61" height="44" viewBox="0 0 61 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0 26.2855H12.9844L4.32807 43.4283H17.3125L25.9689 26.2855V0.571289H0V26.2855Z" fill="#FF6B00" />
-                                                        <path d="M34.625 0.571289V26.2855H47.6094L38.9531 43.4283H51.9375L60.5939 26.2855V0.571289H34.625Z" fill="#FF6B00" />
-                                                    </svg>
-                                                </div>
-                                                <blockquote class="cs_testimonial_text">
-                                                    The web development team at thinkB understood my vision & requirements and perfectly crafted my website. They were calm & cooperative throughout the process.
-                                                </blockquote>
-                                                <div class="cs_testimonial_meta">
-                                                    <div class="cs_testimonial_avatar">
-                                                        <img src="assets/img/user.png" alt="Avatar" />
-                                                    </div>
-                                                    <div class="cs_testimonial_meta_right">
-                                                        <h3 class="cs_testimonial_avatar_name">
-                                                            Khaja vali
-                                                        </h3>
-                                                        <div class="cs_testimonial_avatar_designation">
-                                                            From Bengaluru
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cs_pagination cs_style1"></div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container">
+                <div class="title">Testimonials</div>
+                <p class="subtitle">Our patients commend our care, facilities, and staff, reflected in positive reviews.</p>
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/50" alt="Patient Photo" class="profile-pic" />
+                        <div class="patient-name">Patient 1</div>
+                        <p class="date">1 year, 1 month ago</p>
+                        <div class="stars">★★★★★</div>
+                        <p class="review">In this region, I was treated successfully, and a family member recovered from a chronic condition without surgery.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/50" alt="Patient Photo" class="profile-pic" />
+                        <div class="patient-name">Patient 2</div>
+                        <p class="date">1 year ago</p>
+                        <div class="stars">★★★★☆</div>
+                        <p class="review">Found exceptional care and support here, with a friendly staff and effective treatment.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/50" alt="Patient Photo" class="profile-pic" />
+                        <div class="patient-name">Patient 3</div>
+                        <p class="date">1 year, 1 month ago</p>
+                        <div class="stars">★★★★★</div>
+                        <p class="review">Grateful for the kind support and successful recovery, thanks to the dedicated team.</p>
                     </div>
                 </div>
-                <div class="cs_height_150 cs_height_lg_60"></div>
-            </section>
+                <div class="nav-buttons">
+                    <button class="nav-btn">←</button>
+                    <button class="nav-btn">→</button>
+                </div>
+            </div>
+            <script></script>
             <!-- End Testimonial -->
             <div class="cs_height_115 cs_height_lg_60"></div>
 
@@ -969,7 +876,7 @@
                                 <p>
                                     Appycode is a Bangalore-based software development company dedicated to filling technological gaps in businesses with cutting-edge digital solutions.
                                 </p>
-                                <a href="mailto:code@appycode.in" class="cs_primary_font anim_text_upanddowns"><span>code@appycode.in</span></a>
+                                <a href="mailto:appycode2025@gmail.com" class="cs_primary_font anim_text_upanddowns"><span>appycode2025@gmail.com</span></a>
                             </div>
                         </div>
                         <div class="col-lg-6 offset-lg-1">
@@ -1016,7 +923,10 @@
                                             />
                                         </svg>
                                     </i>
-                                    +91 99669 92122
+                                    <a href="tel:+919966992122" class="text-decoration-none d-flex align-items-center">
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <span class="">+91 99669 92122</span>
+                                    </a>
                                 </li>
                                 <li>
                                     <i>
@@ -1033,7 +943,9 @@
                                             />
                                         </svg>
                                     </i>
-                                    code@appycode.in
+                                    <a href="mailto:appycode2025@gmail.com" class="text-decoration-none">
+                                        <span class="ms-2">appycode2025@gmail.com</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -1078,6 +990,7 @@
             </div>
         </div>
         <!-- End Video Popup -->
+
         <!-- Script -->
         <script src="assets/js/plugins/jquery-3.7.0.min.js"></script>
         <script src="assets/js/plugins/isotope.pkg.min.js"></script>
@@ -1089,5 +1002,22 @@
         <script src="assets/js/plugins/ScrollSmoother.min.js"></script>
         <script src="assets/js/plugins/gsap.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!" target="_blank" id="whatsappScrollBtn" style="">
+            <img src="assets/img/square-whatsapp-brands-solid-full.svg" alt="WhatsApp Icon" style="width: 69px; height: 69px;" />
+        </a>
+
+        <!-- Scripts -->
+
+        <script>
+            const whatsappBtn = document.getElementById("whatsappScrollBtn");
+            let shownOnce = false;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200 && !shownOnce) {
+                    whatsappBtn.style.display = "flex";
+                    shownOnce = true;
+                }
+            });
+        </script>
     </body>
 </html>

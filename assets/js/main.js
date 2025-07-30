@@ -78,7 +78,7 @@
  --------------------------------------------------------------*/
   function preloader() {
     $(".cs_preloader_in").fadeOut();
-    $(".cs_preloader").delay(100).fadeOut("slow");
+    $(".cs_preloader").delay(3500).fadeOut("slow");
   }
 
   /*--------------------------------------------------------------
@@ -91,7 +91,7 @@
     );
     $(".cs_munu_toggle").on("click", function () {
       $(this)
-        .toggleClass("cs_toggle_active")
+        .toggleClass("kahja_active")
         .siblings(".cs_nav_list")
         .slideToggle();
     });
@@ -1067,11 +1067,11 @@
   /*--------------------------------------------------------------
        33. Lading pages btn
 --------------------------------------------------------------*/
-  if ($.exists(".cs_toggle")) {
+  if ($.exists(".kahja")) {
     $("#open").on("click", function () {
       $(this).hide();
       $("#clecel").show();
-      $(".setting_mode").css("right", "120px");
+      $(".mode").css("right", "120px");
       $(".cs_mode_btn").css({
         right: "0",
       });
@@ -1080,7 +1080,7 @@
     $("#clecel").on("click", function () {
       $(this).hide();
       $("#open").show();
-      $(".setting_mode").css("right", "0");
+      $(".mode").css("right", "0");
       $(".cs_mode_btn").css({
         right: "-120px",
       });
@@ -1130,102 +1130,12 @@
 })(jQuery);
 
 
-const playBtn = document.getElementById('playBtn');
-const mainVideo = document.getElementById('mainVideo');
-const videoThumbnail = document.getElementById('videoThumbnail');
-const videoOverlay = document.getElementById('videoOverlay');
-const videoCaptionWrapper = document.querySelector('.video-caption-wrapper');
-const closeBtn = document.getElementById('closeBtn');
-
-function hideElements(...elements) {
-  elements.forEach(el => {
-    el.classList.add('hide');
-    el.classList.remove('show');
-  });
-}
-
-function showElements(...elements) {
-  elements.forEach(el => {
-    el.classList.remove('hide');
-    el.classList.add('show');
-  });
-}
-
-playBtn.addEventListener('click', async () => {
-  // Smoothly hide banner elements
-  hideElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
-  // Smoothly show video and close button
-  showElements(mainVideo, closeBtn);
-
-  try {
-    if (mainVideo.requestFullscreen) {
-      await mainVideo.requestFullscreen();
-    } else if (mainVideo.webkitRequestFullscreen) {
-      await mainVideo.webkitRequestFullscreen();
-    } else if (mainVideo.msRequestFullscreen) {
-      await mainVideo.msRequestFullscreen();
-    }
-    mainVideo.play();
-  } catch (err) {
-    console.error("Fullscreen failed:", err);
-    mainVideo.play();
-  }
-});
-
-closeBtn.addEventListener('click', async () => {
-  mainVideo.pause();
-  mainVideo.currentTime = 0;
-
-  // Smoothly hide video and close button
-  hideElements(mainVideo, closeBtn);
-  // Smoothly show banner elements
-  showElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
-
-  if (document.fullscreenElement) {
-    if (document.exitFullscreen) {
-      await document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      await document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) {
-      await document.msExitFullscreen();
-    }
-  }
-});
-
-document.addEventListener('fullscreenchange', () => {
-  if (!document.fullscreenElement) {
-    mainVideo.pause();
-    mainVideo.currentTime = 0;
-
-    hideElements(mainVideo, closeBtn);
-    showElements(videoThumbnail, videoOverlay, playBtn, videoCaptionWrapper);
-  }
-});
 
 
 
-const stopVideoBtn = document.getElementById('stopVideoBtn');
 
-stopVideoBtn.addEventListener('click', async () => {
-  mainVideo.pause();
-  mainVideo.currentTime = 0;
 
-  // Hide video & buttons
-  mainVideo.classList.remove('show');
-  closeBtn.classList.remove('show');
-  stopVideoBtn.style.display = 'none';
 
-  // Show thumbnail and overlay again
-  videoThumbnail.classList.add('show');
-  videoOverlay.classList.add('show');
-  playBtn.classList.add('show');
-  videoCaptionWrapper.classList.add('show');
-
-  // Exit fullscreen if active
-  if (document.fullscreenElement) {
-    await document.exitFullscreen();
-  }
-});
 
 
 
@@ -1256,3 +1166,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const playBtn = document.getElementById("playBtn");
+const fullscreenWrapper = document.getElementById("fullscreenVideoWrapper");
+const fullscreenVideo = document.getElementById("fullscreenVideo");
+const exitBtn = document.getElementById("exitFullscreenBtn");
+const mainPage = document.getElementById("mainPage");
+
+// Show with enter animation
+playBtn.addEventListener("click", function () {
+  fullscreenWrapper.style.display = "block";
+  fullscreenWrapper.classList.remove("fullscreen-exit");
+  fullscreenWrapper.classList.add("fullscreen-animate");
+  fullscreenVideo.play();
+  mainPage.style.display = "none";
+  document.body.style.overflow = "hidden";
+});
+
+// Exit with animation
+exitBtn.addEventListener("click", function () {
+  fullscreenWrapper.classList.remove("fullscreen-animate");
+  fullscreenWrapper.classList.add("fullscreen-exit");
+
+  // Wait for exit animation to finish before hiding
+  setTimeout(() => {
+    fullscreenWrapper.style.display = "none";
+    fullscreenVideo.pause();
+    fullscreenVideo.currentTime = 0;
+    fullscreenWrapper.classList.remove("fullscreen-exit"); // clean up
+    mainPage.style.display = "block";
+    document.body.style.overflow = "auto";
+  }, 1200); // match the animation duration (1.2s)
+});
+
+

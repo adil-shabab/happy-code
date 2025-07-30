@@ -26,13 +26,112 @@
         <div class="cs_cursor_1"></div>
         <div class="cs_cursor_2"></div>
         <!-- Preloader -->
-        <div class="cs_preloader cs_center">
-            <div class="cs_preloader_in">
-                <div class="loading loading05">
-                    <span> <img src="assets/img/Appycode-logo(White).png" alt="Logo" /></span>
-                </div>
+         <div class="custom-preloader" id="preloader">
+            <div class="preloader-inner">
+                <svg width="500" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="60" text-anchor="middle" id="animated-char">{</text>
+                </svg>
+                <div class="loading-lines" id="loading-text">Loading...</div>
             </div>
         </div>
+
+     
+        
+     <style>
+            body {
+                margin: 0;
+                background-color: white;
+                font-family: "Courier New", monospace;
+                color: #000;
+            }
+
+            .custom-preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                flex-direction: column;
+            }
+
+            .preloader-inner {
+                text-align: center;
+            }
+
+            svg text {
+                font-size: 64px;
+                fill: #ff6b00;
+                transition: opacity 0.2s ease;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            }
+
+            .loading-lines {
+                margin-top: 20px;
+                font-size: 18px;
+                text-align: center;
+                opacity: 0.85;
+                height: 1.2em;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 2px solid black;
+                animation: blinkCursor 1s step-end infinite;
+                color: black;
+            }
+
+            @keyframes blinkCursor {
+                0%,
+                100% {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: black;
+                }
+            }
+     </style>
+
+        <script>
+            const symbols = ["{", "<", "/", ">", "}", ";"];
+            const messages = ["Compiling creativity...", "Building awesome things...", "Writing clean code...", "Loading awesomeness...", "Deploying imagination...", "Debugging the matrix..."];
+
+            const textChar = document.getElementById("animated-char");
+            const loadingText = document.getElementById("loading-text");
+
+            let symbolIndex = 0;
+            let messageIndex = 0;
+
+            // Animate symbols every 200ms
+            const symbolInterval = setInterval(() => {
+                textChar.style.opacity = 0;
+                setTimeout(() => {
+                    textChar.textContent = symbols[symbolIndex];
+                    textChar.style.opacity = 1;
+                    symbolIndex = (symbolIndex + 1) % symbols.length;
+                }, 100);
+            }, 300);
+
+            // Change message every 600ms
+            const messageInterval = setInterval(() => {
+                loadingText.textContent = messages[messageIndex];
+                messageIndex = (messageIndex + 1) % messages.length;
+            }, 600);
+
+            // Hide preloader after page load
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    clearInterval(symbolInterval);
+                    clearInterval(messageInterval);
+                    document.getElementById("preloader").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                    document.body.style.overflow = "auto";
+                }, 2000); // Change delay as needed
+            });
+        </script>
+
         <!-- Start Header Section -->
         <!-- Start Header Section -->
         <header class="cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width">
@@ -165,7 +264,11 @@
                                                 fill="white"
                                             ></path>
                                         </svg>
-                                        <span class="ms-2">+91 99669 92122</span>
+                                       <a href="tel:+919966992122" class="text-decoration-none text-dark d-flex align-items-center">
+    <i class="bi bi-telephone-fill"></i>
+    <span class="ms-2">+91 99669 92122</span>
+</a>
+
                                     </a>
                                 </h4>
 
@@ -177,7 +280,7 @@
 
                                 <hr class="mt-2 me-5 mb-2" />
                                 <h2>
-                                    <a href="mailto:code@appycode.in" class="cs_primary_font cs_text_btn"><span class="cs_black">code@appycode.in</span></a>
+                                    <a href="mailto:appycode2025@gmail.com" class="cs_primary_font cs_text_btn"><span class="cs_black">appycode2025@gmail.com</span></a>
                                 </h2>
                             </div>
                         </div>
@@ -468,7 +571,7 @@
                                 <p>
                                     Appycode is a Bangalore-based software development company dedicated to filling technological gaps in businesses with cutting-edge digital solutions.
                                 </p>
-                                <a href="mailto:code@appycode.in" class="cs_primary_font anim_text_upanddowns"><span>code@appycode.in</span></a>
+                                <a href="mailto:appycode2025@gmail.com" class="cs_primary_font anim_text_upanddowns"><span>appycode2025@gmail.com</span></a>
                             </div>
                         </div>
                         <div class="col-lg-6 offset-lg-1">
@@ -514,8 +617,12 @@
                                                 fill="white"
                                             />
                                         </svg>
-                                    </i>
-                                    +91 99669 92122
+                                   </i>
+                                   <a href="tel:+919966992122" class="text-decoration-none  d-flex align-items-center">
+    <i class="bi bi-telephone-fill"></i>
+    <span class="">+91 99669 92122</span>
+</a>
+
                                 </li>
                                 <li>
                                     <i>
@@ -532,7 +639,10 @@
                                             />
                                         </svg>
                                     </i>
-                                    code@appycode.in
+                                    <a href="mailto:appycode2025@gmail.com" class="text-decoration-none ">
+    <span class="ms-2">appycode2025@gmail.com</span>
+</a>
+
                                 </li>
                             </ul>
                         </div>
@@ -572,6 +682,25 @@
         <script src="assets/js/plugins/ScrollSmoother.min.js"></script>
         <script src="assets/js/plugins/gsap.min.js"></script>
         <script src="assets/js/main.js"></script>
+    <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!" target="_blank" id="whatsappScrollBtn" style="">
+            <img src="assets/img/square-whatsapp-brands-solid-full.svg" alt="WhatsApp Icon" style="width: 69px; height: 69px;" />
+        </a>
+
+
+<!-- Scripts -->
+
+<script>
+  const whatsappBtn = document.getElementById("whatsappScrollBtn");
+  let shownOnce = false;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200 && !shownOnce) {
+      whatsappBtn.style.display = "flex";
+      shownOnce = true;
+    }
+  });
+</script>
+
     </body>
 
    <!-- Page: Home | Website: https://appycode.in | Last updated: 11 July 2025 -->

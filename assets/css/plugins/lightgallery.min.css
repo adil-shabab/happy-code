@@ -989,3 +989,32 @@ body:not(.lg-from-hash)
   -o-transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
 }
+
+
+
+
+
+    svg text {
+      font-size: 64px;
+      fill:#ff6b00;
+      transition: opacity 0.2s ease;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .loading-lines {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      opacity: 0.85;
+      height: 1.2em;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid black;
+      animation: blinkCursor 1s step-end infinite;
+      color: black;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: white; }
+    }

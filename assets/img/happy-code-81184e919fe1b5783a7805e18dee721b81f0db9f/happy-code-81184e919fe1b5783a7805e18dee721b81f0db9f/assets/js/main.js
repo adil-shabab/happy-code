@@ -91,7 +91,7 @@
     );
     $(".cs_munu_toggle").on("click", function () {
       $(this)
-        .toggleClass("cs_toggle_active")
+        .toggleClass("kahja_active")
         .siblings(".cs_nav_list")
         .slideToggle();
     });
@@ -1066,11 +1066,11 @@
   /*--------------------------------------------------------------
        33. Lading pages btn
 --------------------------------------------------------------*/
-  if ($.exists(".cs_toggle")) {
+  if ($.exists(".kahja")) {
     $("#open").on("click", function () {
       $(this).hide();
       $("#clecel").show();
-      $(".setting_mode").css("right", "120px");
+      $(".mode").css("right", "120px");
       $(".cs_mode_btn").css({
         right: "0",
       });
@@ -1079,7 +1079,7 @@
     $("#clecel").on("click", function () {
       $(this).hide();
       $("#open").show();
-      $(".setting_mode").css("right", "0");
+      $(".mode").css("right", "0");
       $(".cs_mode_btn").css({
         right: "-120px",
       });

@@ -1602,9 +1602,9 @@
         <!-- End Footer -->
     </div>
 
-    <div class="cs_toggle">
-        <div class="setting_mode">
-            <button id="open"><img src="assets/img/brightnes.svg" alt="..."></button>
+    <div class="kahja">
+        <div >
+            
             <button id="clecel"><img src="assets/img/close.svg" alt="..."></button>
         </div>
         <div class="cs_mode_btn js-mode-type">
@@ -1645,6 +1645,25 @@
     <script src="assets/js/plugins/ScrollSmoother.min.js"></script>
     <script src="assets/js/plugins/gsap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!" target="_blank" id="whatsappScrollBtn" style="">
+            <img src="assets/img/square-whatsapp-brands-solid-full.svg" alt="WhatsApp Icon" style="width: 69px; height: 69px;" />
+        </a>
+
+
+<!-- Scripts -->
+
+<script>
+  const whatsappBtn = document.getElementById("whatsappScrollBtn");
+  let shownOnce = false;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200 && !shownOnce) {
+      whatsappBtn.style.display = "flex";
+      shownOnce = true;
+    }
+  });
+</script>
+
 </body>
 
 
