@@ -3277,7 +3277,7 @@ label {
 .cs_sticky_header {
   position: fixed !important;
   width: 100%;
-  z-index: 999;
+  z-index: 888;
 }
 
 .cs_gescout_sticky {

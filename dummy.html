@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appy Care Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+     <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d1d1d;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      flex: 1 1 calc(33.333% - 30px);
+      max-width: 32%;
+      padding: 25px 20px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 24px;
+      color: white;
+      background-color: #f89a28;
+      padding: 10px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .card h3 {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      color: #333;
+      margin: 15px 0 10px;
+    }
+
+    .card h4 {
+      font-size: 16px;
+      color: #444;
+      margin-top: 12px;
+      margin-bottom: 5px;
+    }
+
+    .card p,
+    .card ul,
+    .card li {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .card {
+        flex: 1 1 calc(48% - 30px);
+        max-width: 48%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <h1>Appy Care Services</h1>
+
+    <div class="cards-container">
+
+
+        <div class="card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Smart Appointment System</h3>
+            <p>Enabling easy, flexible appointment bookings for patients and hospital teams.</p>
+
+            <h4>In-Person Consultation (Scheduled)</h4>
+            <ul>
+                <li>Patients fill in basic details: Name, Email, Phone Number</li>
+                <li>Select doctor/specialty, date, and time</li>
+                <li>Payment can be made online or at the hospital</li>
+            </ul>
+
+            <h4>Online Video Consultation</h4>
+            <ul>
+                <li>Patients register online with basic details</li>
+                <li>Select doctor/specialty and preferred time slot</li>
+                <li>Make payment via Razorpay or hospital’s payment gateway</li>
+                <li>A secure video link is automatically generated and shared</li>
+            </ul>
+
+            <h4>Walk-In Consultation</h4>
+            <ul>
+                <li>No prior booking required</li>
+                <li>Front office registers the patient directly at the hospital reception</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Admin Dashboard Roles & Access</h3>
+            <p>The central control panel is designed to offer real-time insights, role-based access, and complete
+                operational control over the platform.</p>
+
+            <h4>Supreme Admin</h4>
+            <p>Full control over the platform and user roles.</p>
+
+            <h4>Front Office</h4>
+            <p>Handles appointment booking, patient registration, and basic data management.</p>
+
+            <h4>HR</h4>
+            <p>Create and publish job openings on the hospital’s careers page. Manage applicant tracking and resumes.
+            </p>
+
+            <h4>Media</h4>
+            <p>Manage blogs, galleries, campaigns, and promotions.</p>
+
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-injured"></i>
+            <h3>Patient Management System</h3>
+            <p>Helping doctors access accurate patient data and streamline the consultation flow.</p>
+
+            <h4>Features Across All Consultations</h4>
+            <ul>
+                <li>Centralized access to patient records via dashboard</li>
+                <li>Real-time visibility into upcoming appointments</li>
+                <li>Patient profiles include basic info, consultation history, and payment status</li>
+            </ul>
+
+            <h4>Video Consultations</h4>
+            <ul>
+                <li>Doctors can view scheduled virtual appointments</li>
+                <li>Access patient details before the call</li>
+                <li>Conduct consultation via secure video link</li>
+            </ul>
+
+            <h4>In-Person Consultations</h4>
+            <ul>
+                <li>Daily schedule is auto-updated on the doctor dashboard</li>
+                <li>Quick access to appointment type, timing, and patient details</li>
+            </ul>
+
+            <h4>Walk-Ins</h4>
+            <ul>
+                <li>Patient gets registered by the front desk</li>
+                <li>Doctor is notified in the backend with updated queue and details</li>
+                <li>Once registered, patients can directly book future appointments without re-registering</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+            <i class="fas fa-vials"></i>
+            <h3>Health Checkups & Diagnostics</h3>
+            <li>The admin panel allows hospital staff to easily add, edit, or delete individual diagnostic tests</li>
+            <li> comprehensive health packages based on availability or seasonal needs</li>
+            <li>Patients can browse available tests, book appointments online, and receive instant confirmations and
+                reminders via SMS and WhatsApp</li>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-hospital"></i>
+            <h3>Department Management</h3>
+            <ul>
+                <li>Allows the hospital admin team to create, organize, and maintain every clinical department’s digital
+                    presence across the platform.</li>
+                <li>Add/Edit/Delete Departments</li>
+                <li>Link Doctors & Services</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-clock"></i>
+            <h3>Appointment Tracking</h3>
+            <ul>
+                <li>Upcoming Appointments</li>
+                <li>Completed Appointments</li>
+                <li>Cancelled Appointments</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Dashboard</h3>
+            <p>A centralized, real-time view of your hospital’s revenue performance on appointments, departmental
+                statistics, Health Check Up Revenue, payment summaries, Today's Bookings all at a glance.</p>
+        </div>
+
+
+
+        <div class="card">
+            <i class="fas fa-history"></i>
+            <h3>Appointment History</h3>
+            <p>Access a full log of all patient appointments, including status, mode (video/in-person), and payment
+                confirmation.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-notes-medical"></i>
+            <h3>E‑Prescription</h3>
+            <p>Doctors can instantly generate and share digital prescriptions with patients via WhatsApp using the
+                hospital’s official number.This enhances brand visibility while protecting doctor privacy.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-comment-dots"></i>
+            <h3>Messages</h3>
+            <p>All incoming patient enquiries through forms or campaigns are routed directly to the admin panel, where
+                they can be tracked, categorized, and responded to promptly.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-globe"></i>
+            <h3>International Patient Module</h3>
+            <p>Designed for global access, this module supports overseas patients with multilingual forms,
+                timezone-adjusted scheduling, and dedicated enquiry tracking.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Campaigns & Ads Manager</h3>
+            <p>Run awareness and promotional campaigns across platform. Responses are directly captured in the admin
+                panel.Banners for priority services can be managed and displayed on the homepage</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-md"></i>
+            <h3>Doctor Management</h3>
+            <p>Easily manage doctor profiles, schedules, specialties, and availability. Display verified profiles with
+                photo, expertise, and patient reviews.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-search"></i>
+            <h3>Search Doctors & Departments</h3>
+            <p>Enable patients to find the right care quickly with a search feature that filters doctors by specialty,
+                department, and availability.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-credit-card"></i>
+            <h3>Payments History</h3>
+            <p>TTrack and view all payments made for appointments,walk-in registrations and health checkups. Integrated
+                with payment gateways for real-time reporting.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-images"></i>
+            <h3>Hospital Gallery Manager</h3>
+            <p>Visually showcase your hospital’s facilities, staff, and services with a customizable media gallery
+                managed through the backend.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-blog"></i>
+            <h3>Blogs</h3>
+            <p>Regularly publish educational and engaging articles focused on health awareness, wellness tips, and
+                expert advice from doctors.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-search-dollar"></i>
+            <h3>SEO Content</h3>
+            <p>Create search-engine-optimized articles, service descriptions, FAQs, and landing page content that target
+                specific keywords and patient queries. This content is strategically written to improve visibility on
+                Google, attract relevant traffic, and convert visitors into patients</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Career & Job Application</h3>
+            <p>Professionals apply to open positions directly on your website. HR can manage applications via the admin
+                panel.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bell"></i>
+            <h3>Push Notifications + Voice Alerts</h3>
+            <p>Send automated notifications and voice alerts to patients for appointments, promotions, or test results,
+                enhancing communication and engagement.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-wallet"></i>
+            <h3>Online Payment Gateway Integration</h3>
+            <p>Securely collect payments for appointments, diagnostics, and services through integrated gateways like
+                Razorpay, Stripe, etc.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-doctor"></i>
+            <h3>Doctor Dashboard</h3>
+            <p>Each doctor has a personal dashboard to view appointments, access patient records, share prescriptions,
+                and manage their schedule.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Web-App for Doctors</h3>
+            <p>Doctors can access their dashboards via mobile, manage appointments, view patient info, and consult on
+                the go.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-camera"></i>
+            <h3>Doctor Profile Photoshoot</h3>
+            <p>Professional photo session to enhance the visual branding of doctor profiles used across the website,
+                marketing, and campaigns.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-lock"></i>
+            <h3>Security & Infrastructure</h3>
+            <p>Built with enterprise-grade cloud hosting, SSL encryption, firewall protection, and secure APIs to keep
+                patient data and operations safe.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h3>Support & Maintenance</h3>
+            <p>Maintenance and support (bugs, backups, updates).Covers SSL, server, domain renewals, protection, cloud
+                costs, WhatsApp & SMS integrations.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

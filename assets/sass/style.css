@@ -182,6 +182,28 @@ ol {
   height: 0;
 }
 
+  .Get__on_touch_button{
+  height: 40px;       
+  border-radius: 50px;
+  border: 1px solid #A47864; 
+  padding: 10px 16px;
+  gap: 10px;         
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; 
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: #A47864;
+  font-weight: 500;
+  }
+
+  /* .card i{
+    width: 45px !important;
+    height: 45px !important;
+  } */
+
 .details-btn:hover {
   background: linear-gradient(45deg, #00d4ff, #007bff);
   transform: scale(1.05);
@@ -327,7 +349,6 @@ ol {
   flex-shrink: 0;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 18px #fcaa1b88, 0 0 36px #fcaa1b33;
 }
 
 .mouse-glow::before {
@@ -360,7 +381,9 @@ ol {
   }
 }
 
-
+.flex-container{
+  display: flex !important;
+}
 
 /* .mission-vision-section {
   padding: 80px 0;
@@ -807,6 +830,26 @@ kbd {
   border-radius: 5px;
 }
 
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .sencd__pere {
+    height: 37px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 800;
+    font-size: 24px !important;
+    line-height: 37px;
+    letter-spacing: 0;
+    position: relative;
+}
+
+.cs_footer_info .cs_primary_font.anim_text_upanddowns{
+  font-size: 1.6rem !important;
+}
+}
+
+
+  
+
+
 @media screen and (max-width: 991px) {
   body,
   html {
@@ -828,7 +871,51 @@ kbd {
   ul.cs_list_style_none li h3 {
     font-size: 22px;
   }
+
+  .container.vali{
+        max-width: 800px !important;
+    }
+
+    .flex-container {
+    display: flex;
+    padding-top: 48px;
 }
+
+.flex-container .col-lg-3{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 40px !important;
+  width: 100%;
+}
+
+.arrow-circle {
+    width: 38px !important;
+    height: 38px !important;
+}
+
+.sencd__pere {
+    font-weight: 800;
+    font-size: 21px !important;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+   .flex-container {
+    padding: 18px;
+}
+}
+
+@media screen and (max-width: 350px) {
+   .video-caption-btn {
+    padding: 10px 24px !important;
+   }
+   .play-button{
+    height: 58px !important;
+    width: 58px !important;
+   }
+}
+
 input,
 textarea {
   color: --primary-color;
@@ -1983,6 +2070,13 @@ label {
   font-style: italic;
 }
 
+.fa-chevron-left:before {
+    content: "\f053";
+    left: 27px;
+    position: absolute;
+    top: 12px;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: #fcaa1b;
@@ -2026,10 +2120,10 @@ label {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
   transition: transform 0.3s ease;
-  height: 100%;              /* make it fill the slide */
-  min-height: 400px !important;         /* or set this for consistency */
+  height: 100%;             
+  min-height: 400px !important; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3270,7 +3364,7 @@ label {
 }
 .cs_cursor_1 {
   position: fixed;
-  width: 40px;
+  width: 40px !important;
   height: 40px;
   border: 2px solid #ff6b00;
   border-radius: 50%;
@@ -4052,7 +4146,7 @@ label {
 .cs_sticky_header {
   position: fixed !important;
   width: 100%;
-  z-index: 999;
+  z-index: 888 !important;
 }
 
 .cs_gescout_sticky {
@@ -4199,26 +4293,6 @@ label {
 
   }
 
-
-  .Get__on_touch_button{
-        
-  height: 40px;       
- 
-  left: 1186px;      
-  border-radius: 50px;
-  border: 1px solid #A47864; 
-  padding: 10px 16px;
-  gap: 10px;         
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff; 
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  color: #A47864;
-  font-weight: 500;
-  }
   .cs_nav .cs_nav_list ul {
     width: 260px;
     background-color: var(--drak-color);
@@ -8399,4 +8473,6 @@ position: fixed;
 .nav-btn:hover {
     background: #0056b3;
 }
+
+
 
