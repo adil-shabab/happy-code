@@ -50,7 +50,7 @@
 :root {
   --body-font-family: "Kanit", sans-serif;
   --heading-font-family: "Inter Tight", sans-serif;
-  --accent-color: #ff6b00;
+  --accent-color: #fcaa1b;
   --body-color: #454545;
   --heading-color: #101010;
   --primary-color: #101010;
@@ -64,7 +64,7 @@
 .dark {
   --drak-color: #181818;
   --cr_banner-color: #181818;
-  --accent-color: #ff6b00;
+  --accent-color: #fcaa1b;
   --body-color: #e0e0e0;
   --heading-color: #ffffff;
   --primary-color: #ffffff;
@@ -197,7 +197,7 @@ button {
 
 a:hover {
   text-decoration: none;
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 table {
@@ -822,7 +822,7 @@ hr {
 
 .cs_accent_color,
 .cs_accent_color_hover:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 .cs_white_bg {
@@ -948,7 +948,7 @@ hr {
 
 .cs_accent_bg,
 .cs_accent_bg_hover:hover {
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
 }
 
 .cs_primary_bg,
@@ -1023,7 +1023,7 @@ hr {
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   top: 50%;
   transform: translateY(-50%);
   left: 0px;
@@ -1066,7 +1066,7 @@ hr {
   }
 }
 .cs_btn.cs_style_2 a:hover {
-  border: 1px solid #ff6b00;
+  border: 1px solid #fcaa1b;
 }
 .cs_btn.cs_style_2.cs_type_1 {
   flex-wrap: wrap;
@@ -1094,8 +1094,8 @@ hr {
   border: 1px solid #454545;
 }
 .cs_share_post .cs_share_btn_g .cs_share_btn:hover {
-  border: 1px solid #ff6b00;
-  color: #ff6b00;
+  border: 1px solid #fcaa1b;
+  color: #fcaa1b;
   transition: all 0.1s ease;
 }
 
@@ -1131,7 +1131,7 @@ hr {
   background-color: #000;
 }
 .cs_pagination_item.active {
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   color: #fff;
   pointer-events: none;
 }
@@ -1148,7 +1148,7 @@ hr {
   color: #fff;
 }
 .cs_form_field:focus {
-  border-color: #ff6b00;
+  border-color: #fcaa1b;
 }
 
 label {
@@ -1210,7 +1210,7 @@ label {
 .cs_cursor_lg {
   width: 40px;
   height: 40px;
-  border: 1px solid #ff6b00;
+  border: 1px solid #fcaa1b;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -1220,7 +1220,7 @@ label {
 .cs_cursor_sm {
   width: 8px;
   height: 8px;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -1319,7 +1319,7 @@ label {
 .cs_cricle.cs_style_1 .main {
   width: 88px;
   height: 88px;
-  border: 2px solid #ff6b00;
+  border: 2px solid #fcaa1b;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1346,7 +1346,7 @@ label {
 .cs_cricle.cs_style_1 .main2 {
   width: 138px;
   height: 138px;
-  border: 2px solid #ff6b00;
+  border: 2px solid #fcaa1b;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1360,7 +1360,7 @@ label {
 .cs_cricle.cs_style_1 .main2 .circle2 {
   width: 20px;
   height: 20px;
-  background: #ff6b00;
+  background: #fcaa1b;
   border-radius: 50%;
   position: absolute;
   top: 0px;
@@ -1380,7 +1380,7 @@ label {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid #ff6b00;
+  border: 1px solid #fcaa1b;
   width: 184px;
   height: 0px;
   opacity: 0.7;
@@ -1679,7 +1679,7 @@ label {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   top: 6px;
   left: 0;
 }
@@ -1746,7 +1746,7 @@ label {
 }
 .cs_section_heading_hr.cs_style_1 .cs_hr_design {
   width: 100px;
-  border: 0.5px solid #ff6b00;
+  border: 0.5px solid #fcaa1b;
 }
 .cs_section_heading_hr.cs_style_1.cs_color_1 .cs_hr_design {
   border: 0.5px solid #454545;
@@ -1901,7 +1901,7 @@ label {
   top: -30px;
   height: 151px;
   width: 151px;
-  background: #ff6b00;
+  background: #fcaa1b;
   opacity: 0.8;
   filter: blur(125px);
 }
@@ -1958,7 +1958,7 @@ label {
   width: 100%;
   right: -60px;
   bottom: -60px;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   border-radius: inherit;
 }
 .cs_image_layer.cs_style1.cs_size_md {
@@ -1990,7 +1990,7 @@ label {
   display: inline-flex;
 }
 .cs_tab_links.cs_style1 li.active a {
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   border-radius: 10px;
 }
 
@@ -2089,7 +2089,7 @@ label {
   border-radius: 50%;
 }
 .cs_scrollup:hover {
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   color: #fff;
 }
 
@@ -2140,7 +2140,7 @@ label {
   position: absolute;
   height: 7px;
   width: 0%;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   left: 0;
   bottom: 20px;
   z-index: -1;
@@ -2234,7 +2234,7 @@ label {
   position: absolute;
   top: 0;
   font-size: 18px;
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_field_group .cs_input_label {
   display: block;
@@ -2497,7 +2497,7 @@ label {
   position: fixed;
   width: 40px;
   height: 40px;
-  border: 2px solid #ff6b00;
+  border: 2px solid #fcaa1b;
   border-radius: 50%;
   left: 0;
   top: 0;
@@ -2521,7 +2521,7 @@ label {
   position: fixed;
   width: 8px;
   height: 8px;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
   border-radius: 50%;
   left: 0;
   top: 0;
@@ -2751,7 +2751,7 @@ label {
   transition: all 0.4s ease;
 }
 .cs_swiper_navigation_wrap > *:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 @media screen and (max-width: 991px) {
@@ -3256,7 +3256,7 @@ label {
   transform: rotate(45deg);
 }
 .cs_close:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
   transform: scale(1.05);
 }
 
@@ -3437,7 +3437,7 @@ label {
     background-color: var(--drak-color);
     position: absolute;
     box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-    border-top: 2px solid #ff6b00;
+    border-top: 2px solid #fcaa1b;
     padding: 5px 0px;
     z-index: 100;
     opacity: 0;
@@ -3814,7 +3814,7 @@ label {
   min-height: 70px;
 }
 .cs_footer_social a:hover {
-  border-color: #ff6b00;
+  border-color: #fcaa1b;
 }
 
 .cs_footer_contact_list {
@@ -3998,7 +3998,7 @@ label {
   justify-content: flex-start;
 }
 .cs_isotop_filter.cs_style1 .active a {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_isotop_filter.cs_style1 .active a::before {
   transform: scale(1);
@@ -4109,8 +4109,8 @@ label {
 }
 .tag-cloud-link:hover {
   color: #fff;
-  background-color: #ff6b00;
-  border-color: #ff6b00;
+  background-color: #fcaa1b;
+  border-color: #fcaa1b;
 }
 
 .widget_archive ul,
@@ -4193,7 +4193,7 @@ label {
   transition: all 0.3s ease;
 }
 .cs_sidebar_search input:focus {
-  border-color: #ff6b00;
+  border-color: #fcaa1b;
 }
 
 .cs_sidebar_search_btn {
@@ -4208,7 +4208,7 @@ label {
   transition: all 0.3s ease;
 }
 .cs_sidebar_search_btn:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 .cs_author_card img {
@@ -4361,10 +4361,10 @@ label {
 }
 .cs_hero.cs_style2 .cs_right_text .t1 {
   --color-1: #fff;
-  --color-2: #ff6b00;
+  --color-2: #fcaa1b;
 }
 .cs_hero.cs_style2 .cs_right_text .t2 {
-  --color-1: #ff6b00;
+  --color-1: #fcaa1b;
   --color-2: #fff;
 }
 .cs_hero.cs_style2 .cs_right_text .t3 {
@@ -4855,8 +4855,8 @@ label {
 }
 .cs_iconbox_3_list .cs_hover_tab.active .cs_iconbox_icon {
   color: #fff;
-  background-color: #ff6b00;
-  border-color: #ff6b00;
+  background-color: #fcaa1b;
+  border-color: #fcaa1b;
 }
 
 .cs_iconbox.cs_style3 {
@@ -4883,8 +4883,8 @@ label {
 }
 .cs_iconbox.cs_style3 .cs_iconbox_icon:hover {
   color: #fff;
-  background-color: #ff6b00;
-  border-color: #ff6b00;
+  background-color: #fcaa1b;
+  border-color: #fcaa1b;
 }
 .cs_iconbox.cs_style3 .cs_iconbox_title {
   font-size: 30px;
@@ -4895,8 +4895,8 @@ label {
 }
 .cs_iconbox.cs_style3:hover .cs_iconbox_icon {
   color: #fff;
-  background-color: #ff6b00;
-  border-color: #ff6b00;
+  background-color: #fcaa1b;
+  border-color: #fcaa1b;
 }
 
 @keyframes inactiveImageAnimation1 {
@@ -5135,7 +5135,7 @@ label {
 }
 .cs_blog.cs_style_1:hover .cs_blog_title {
   transition: all 0.5s;
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 @media screen and (max-width: 991px) {
@@ -5330,7 +5330,7 @@ label {
 .cs_team_section .cs_team_img:hover > .cs_team_text .cs_team_text_title {
   transition: all 0.7s;
   transition-delay: 0.7s;
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_team_section .cs_team_img .cs_portfolio_overlay {
   width: 100%;
@@ -5609,10 +5609,10 @@ label {
   margin-left: 30px;
 }
 .cs_creative_protfolio_details .cs_project_card .cs_project_card_text :hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_creative_protfolio_details .cs_project_card .cs_project_card_text .cs_subtitle {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 /* end Some Recent Project */
@@ -5627,13 +5627,13 @@ label {
   cursor: pointer;
 }
 .cs_creative_protfolio_menu ul li:nth-child(1) {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_creative_protfolio_menu ul li:active {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_creative_protfolio_menu ul li:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 /*start portfolio page isotop */
@@ -5648,13 +5648,13 @@ label {
   cursor: pointer;
 }
 .cs_isotop_item_menu ul li:nth-child(1) {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_isotop_item_menu ul li:active {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_isotop_item_menu ul li:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 .cs_isotop_items_details .cs_item {
@@ -5675,7 +5675,7 @@ label {
   color: #fff;
 }
 .cs_isotop_items_details .cs_item .cs_item_hover .cs_item_text p {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_isotop_items_details .cs_item .cs_item_hover:hover .cs_item_text {
   bottom: 50px;
@@ -5746,7 +5746,7 @@ label {
   margin-bottom: 8px;
 }
 .cs_portfolio.cs_style_1 .cs_portfolio_title:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_portfolio.cs_style_1 .cs_portfolio_subtitle {
   color: var(--accent-color);
@@ -5800,7 +5800,7 @@ label {
   line-height: 27px;
 }
 .cs_portfolio.cs_style_2 .cs_portfolio_title:hover {
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 .cs_portfolio.cs_style_2 .cs_portfolio_subtitle {
   color: #454545;
@@ -6002,7 +6002,7 @@ label {
   top: -55px;
   height: 135px;
   width: 135px;
-  background: #ff6b00;
+  background: #fcaa1b;
   filter: blur(125px);
   transition: all 0.4s ease;
   opacity: 0;
@@ -6326,7 +6326,7 @@ label {
   width: 30px;
   height: 1px;
   margin-right: 15px;
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
 }
 
 @media screen and (max-width: 991px) {
@@ -6361,7 +6361,7 @@ label {
   font-size: 16px;
 }
 .cs_creative_protfolio.cs_card_style_change .cs_card.cs_style_1.cs_color_1:hover > .cs_card_link_wrap .cs_card_link {
-  color: #ff6b00;
+  color: #fcaa1b;
   transform: rotate(0deg);
 }
 .cs_creative_protfolio.cs_card_style_change .cs_card.cs_style_1.cs_color_1:hover > .cs_card_link_wrap .cs_card_link span:first-child {
@@ -6519,14 +6519,14 @@ label {
 .cs_work.cs_work_1 .cs_card_work.cs_style_1 .cs_card.cs_style_1 .cs_work_style_1 {
   width: 15px;
   height: 15px;
-  background: #ff6b00;
+  background: #fcaa1b;
   border-radius: 50%;
 }
 .cs_work.cs_work_1 .cs_card_work.cs_style_1 .cs_card.cs_style_1 .cs_work_style_2 {
   width: 30px;
   height: 1px;
   transform: rotate(90deg);
-  background: #ff6b00;
+  background: #fcaa1b;
   margin-left: -7px;
 }
 .cs_work.cs_work_1 .cs_card_work.cs_style_1 .cs_card .cs_work_title {
@@ -6550,7 +6550,7 @@ label {
 }
 .cs_blog.cs_style_1:hover .cs_blog_title {
   transition: all 0.5s;
-  color: #ff6b00;
+  color: #fcaa1b;
 }
 
 .cs_andrew_jackson {
@@ -6654,7 +6654,7 @@ label {
   cursor: pointer;
 }
 .cs_icon .cs_icon_style:hover {
-  background-color: #ff6b00;
+  background-color: #fcaa1b;
 }
 .cs_icon .cs_icon_text .cs_icon_title {
   margin: 0;

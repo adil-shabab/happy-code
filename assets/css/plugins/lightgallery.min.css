@@ -996,7 +996,7 @@ body:not(.lg-from-hash)
 
     svg text {
       font-size: 64px;
-      fill:#ff6b00;
+      fill:#fcaa1b;
       transition: opacity 0.2s ease;
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
