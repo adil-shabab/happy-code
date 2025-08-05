@@ -8060,6 +8060,7 @@ label {
   gap: 20px;
   margin: 0;
   padding: 0;
+  /* background: transparent !important; */
 }
 
 .cs_nav_list a {
@@ -8381,13 +8382,10 @@ margin: 0px;
     }
 }
 
-
-
-
 #chatbotBtn {
 position: fixed;
-    bottom: 12%;
-    right: 1.7% !important;
+    bottom: 14%;
+    right: 2.7% !important;
     display: none;
     align-items: center;
     padding-bottom: 1rem;

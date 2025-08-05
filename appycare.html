@@ -8,12 +8,12 @@
     <!-- <title>Appy Care Services</title> -->
     <!-- <link rel="stylesheet" href="assets/sass/style.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" /> -->
-    
+
     <!-- <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" /> -->
-    
+
     <!-- <link rel="stylesheet" href="assets/sass/style.css" /> -->
-    
-    
+
+
     <!-- Font for clean styling (optional) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -50,15 +50,23 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #a9cddf;
             margin: 0;
         }
 
         h1 {
             text-align: center;
             color: #1d1d1d;
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
             font-size: 36px;
+        }
+
+        .appy-banner {
+            background-image: url('/assets/img/hospital-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 650px;
         }
 
         .cards-container {
@@ -68,6 +76,7 @@
             justify-content: center;
             max-width: 1400px;
             margin: 0 auto;
+            padding-top: 2rem;
         }
 
         .card {
@@ -210,6 +219,36 @@
                 border-color: black;
             }
         }
+
+        @media screen and (max-width:1445px) {
+           .appy-banner {
+            background-image: url('/assets/img/hospital-banner.jpg');
+            background-size: cover;
+            background-position: right;
+            width: 100%;
+            height: 500px;
+            /* opacity: 0; */
+        } 
+
+        .appy-banner h1{
+            padding-top: 15rem !important;
+        }
+
+        }
+
+
+
+        @media screen and (max-width:800px) {
+           .appy-banner {
+            background-image: url('/assets/img/hospital-banner.jpg');
+            background-size: cover;
+            background-position: right;
+            width: 100%;
+            height: 500px;
+            opacity: 0.8;
+        } 
+
+        }
     </style>
 
     <script>
@@ -312,298 +351,417 @@
 
     <div id="scrollsmoother-container">
 
-    <h1 style="padding-top: 80px;">Appy Care Services</h1>
+        <div class="appy-banner">
+            <h1 style="padding-top: 20rem;font-size: 3.4rem;font-weight: 900;">Appy Care Services</h1>
+        </div>
 
-    <div class="cards-container" style="padding-bottom: 50px;">
+        <div class="cards-container" style="padding-bottom: 50px;">
 
 
-        <div class="card">
-            <i class="fas fa-calendar-check"></i>
-            <h3>Smart Appointment System</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Enabling easy, flexible appointment bookings for patients and hospital teams.</p>
+            <div class="card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Smart Appointment System</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Enabling easy, flexible appointment bookings for patients and hospital teams.</p>
 
-            <h4>In-Person Consultation (Scheduled)</h4>
-            <ul>
-                <li>Patients fill in basic details: Name, Email, Phone Number</li>
-                <li>Select doctor/specialty, date, and time</li>
-                <li>Payment can be made online or at the hospital</li>
-            </ul>
+                <h4>In-Person Consultation (Scheduled)</h4>
+                <ul>
+                    <li>Patients fill in basic details: Name, Email, Phone Number</li>
+                    <li>Select doctor/specialty, date, and time</li>
+                    <li>Payment can be made online or at the hospital</li>
+                </ul>
 
-            <h4>Online Video Consultation</h4>
-            <ul>
-                <li>Patients register online with basic details</li>
-                <li>Select doctor/specialty and preferred time slot</li>
-                <li>Make payment via Razorpay or hospital’s payment gateway</li>
-                <li>A secure video link is automatically generated and shared</li>
-            </ul>
+                <h4>Online Video Consultation</h4>
+                <ul>
+                    <li>Patients register online with basic details</li>
+                    <li>Select doctor/specialty and preferred time slot</li>
+                    <li>Make payment via Razorpay or hospital’s payment gateway</li>
+                    <li>A secure video link is automatically generated and shared</li>
+                </ul>
 
-            <h4>Walk-In Consultation</h4>
-            <ul>
-                <li>No prior booking required</li>
-                <li>Front office registers the patient directly at the hospital reception</li>
-            </ul>
+                <h4>Walk-In Consultation</h4>
+                <ul>
+                    <li>No prior booking required</li>
+                    <li>Front office registers the patient directly at the hospital reception</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Admin Dashboard Roles & Access</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>The central control panel is designed to offer real-time insights, role-based access, and complete
+                    operational control over the platform.</p>
+
+                <h4>Supreme Admin</h4>
+                <p>Full control over the platform and user roles.</p>
+
+                <h4>Front Office</h4>
+                <p>Handles appointment booking, patient registration, and basic data management.</p>
+
+                <h4>HR</h4>
+                <p>Create and publish job openings on the hospital’s careers page. Manage applicant tracking and
+                    resumes.
+                </p>
+
+                <h4>Media</h4>
+                <p>Manage blogs, galleries, campaigns, and promotions.</p>
+
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-injured"></i>
+                <h3>Patient Management System</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Helping doctors access accurate patient data and streamline the consultation flow.</p>
+
+                <h4>Features Across All Consultations</h4>
+                <ul>
+                    <li>Centralized access to patient records via dashboard</li>
+                    <li>Real-time visibility into upcoming appointments</li>
+                    <li>Patient profiles include basic info, consultation history, and payment status</li>
+                </ul>
+
+                <h4>Video Consultations</h4>
+                <ul>
+                    <li>Doctors can view scheduled virtual appointments</li>
+                    <li>Access patient details before the call</li>
+                    <li>Conduct consultation via secure video link</li>
+                </ul>
+
+                <h4>In-Person Consultations</h4>
+                <ul>
+                    <li>Daily schedule is auto-updated on the doctor dashboard</li>
+                    <li>Quick access to appointment type, timing, and patient details</li>
+                </ul>
+
+                <h4>Walk-Ins</h4>
+                <ul>
+                    <li>Patient gets registered by the front desk</li>
+                    <li>Doctor is notified in the backend with updated queue and details</li>
+                    <li>Once registered, patients can directly book future appointments without re-registering</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+                <i class="fas fa-vials"></i>
+                <h3>Health Checkups & Diagnostics</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <ul>
+                    <li>The admin panel allows hospital staff to easily add, edit, or delete individual diagnostic tests
+                    </li>
+                    <li> comprehensive health packages based on availability or seasonal needs</li>
+                    <li>Patients can browse available tests, book appointments online, and receive instant confirmations
+                        and
+                        reminders via SMS and WhatsApp</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-hospital"></i>
+                <h3>Department Management</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <ul>
+                    <li>Allows the hospital admin team to create, organize, and maintain every clinical department’s
+                        digital
+                        presence across the platform.</li>
+                    <li>Add/Edit/Delete Departments</li>
+                    <li>Link Doctors & Services</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h3>Appointment Tracking</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <ul>
+                    <li>Upcoming Appointments</li>
+                    <li>Completed Appointments</li>
+                    <li>Cancelled Appointments</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Dashboard</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>A centralized, real-time view of your hospital’s revenue performance on appointments, departmental
+                    statistics, Health Check Up Revenue, payment summaries, Today's Bookings all at a glance.</p>
+            </div>
+
+
+
+            <div class="card">
+                <i class="fas fa-history"></i>
+                <h3>Appointment History</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Access a full log of all patient appointments, including status, mode (video/in-person), and payment
+                    confirmation.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-notes-medical"></i>
+                <h3>E‑Prescription</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Doctors can instantly generate and share digital prescriptions with patients via WhatsApp using the
+                    hospital’s official number.This enhances brand visibility while protecting doctor privacy.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Messages</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>All incoming patient enquiries through forms or campaigns are routed directly to the admin panel,
+                    where
+                    they can be tracked, categorized, and responded to promptly.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-globe"></i>
+                <h3>International Patient Module</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Designed for global access, this module supports overseas patients with multilingual forms,
+                    timezone-adjusted scheduling, and dedicated enquiry tracking.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Campaigns & Ads Manager</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Run awareness and promotional campaigns across platform. Responses are directly captured in the admin
+                    panel.Banners for priority services can be managed and displayed on the homepage</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-md"></i>
+                <h3>Doctor Management</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Easily manage doctor profiles, schedules, specialties, and availability. Display verified profiles
+                    with
+                    photo, expertise, and patient reviews.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-search"></i>
+                <h3>Search Doctors & Departments</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Enable patients to find the right care quickly with a search feature that filters doctors by
+                    specialty,
+                    department, and availability.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Payments History</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>TTrack and view all payments made for appointments,walk-in registrations and health checkups.
+                    Integrated
+                    with payment gateways for real-time reporting.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-images"></i>
+                <h3>Hospital Gallery Manager</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Visually showcase your hospital’s facilities, staff, and services with a customizable media gallery
+                    managed through the backend.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-blog"></i>
+                <h3>Blogs</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Regularly publish educational and engaging articles focused on health awareness, wellness tips, and
+                    expert advice from doctors.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-search-dollar"></i>
+                <h3>SEO Content</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Create search-engine-optimized articles, service descriptions, FAQs, and landing page content that
+                    target
+                    specific keywords and patient queries. This content is strategically written to improve visibility
+                    on
+                    Google, attract relevant traffic, and convert visitors into patients</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Career & Job Application</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Professionals apply to open positions directly on your website. HR can manage applications via the
+                    admin
+                    panel.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-bell"></i>
+                <h3>Push Notifications + Voice Alerts</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Send automated notifications and voice alerts to patients for appointments, promotions, or test
+                    results,
+                    enhancing communication and engagement.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-wallet"></i>
+                <h3>Online Payment Gateway Integration</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Securely collect payments for appointments, diagnostics, and services through integrated gateways
+                    like
+                    Razorpay, Stripe, etc.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-doctor"></i>
+                <h3>Doctor Dashboard</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Each doctor has a personal dashboard to view appointments, access patient records, share
+                    prescriptions,
+                    and manage their schedule.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Web-App for Doctors</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Doctors can access their dashboards via mobile, manage appointments, view patient info, and consult
+                    on
+                    the go.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-camera"></i>
+                <h3>Doctor Profile Photoshoot</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Professional photo session to enhance the visual branding of doctor profiles used across the website,
+                    marketing, and campaigns.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-lock"></i>
+                <h3>Security & Infrastructure</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Built with enterprise-grade cloud hosting, SSL encryption, firewall protection, and secure APIs to
+                    keep
+                    patient data and operations safe.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-tools"></i>
+                <h3>Support & Maintenance</h3>
+                <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
+                <p>Maintenance and support (bugs, backups, updates).Covers SSL, server, domain renewals, protection,
+                    cloud
+                    costs, WhatsApp & SMS integrations.</p>
+            </div>
 
         </div>
 
-        <div class="card">
-            <i class="fas fa-user-shield"></i>
-            <h3>Admin Dashboard Roles & Access</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>The central control panel is designed to offer real-time insights, role-based access, and complete
-                operational control over the platform.</p>
+        <!-- Start Footer -->
+        <footer class="cs_footer cs_primary_bg">
+            <div class="footer-section cs_height_lg_60"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="cs_footer_info">
+                            <img src="assets/img/Appycode-logo(White).png" alt="Logo" />
+                            <p>
+                                Appycode is a Bangalore-based software development company dedicated to filling
+                                technological gaps in businesses with cutting-edge digital solutions.
+                            </p>
+                            <a href="mailto:info@appycode.tech"
+                                class="cs_primary_font anim_text_upanddowns"><span>info@appycode.tech</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="cs_footer_social">
+                            <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center"
+                                target="_blank">Instagram</a>
+                            <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank"
+                                class="cs_center">Linkedin</a>
+                            <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center"
+                                target="_blank">Facebook</a>
+                        </div>
+                        <div class="cs_height_60 cs_height_lg_30"></div>
+                        <ul class="cs_footer_contact_list cs_mp0">
+                            <li>
+                                <i>
+                                    <svg width="14" height="19" viewBox="0 0 14 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 0.0195312C3.14027 0.0195312 0 3.01027 0 6.68621C0 7.78973 0.289693 8.88387 0.840408 9.85434L6.6172 17.8047C6.69411 17.9373 6.84065 18.0195 7 18.0195C7.15935 18.0195 7.30589 17.9373 7.3828 17.8047L13.1617
+                    9.85105C13.7103 8.88387 14 7.78969 14 6.68617C14 3.01027 10.8597 0.0195312 7 0.0195312ZM7 10.0195C5.07014 10.0195 3.50002 8.52418 3.50002 6.68621C3.50002 4.84824 5.07014 3.35289 7 3.35289C8.92986 3.35289 10.5 4.84824 10.5 6.68621C10.5
+                    8.52418 8.92986 10.0195 7 10.0195Z" fill="white" />
+                                    </svg>
+                                </i>
+                                204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka
+                            </li>
+                            <li>
+                                <i>
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.6837 11.9266C13.0957 11.3461 12.3616 11.3461 11.7773 11.9266C11.3316 12.3686 10.8859 12.8105 10.4477 13.26C10.3278 13.3836 10.2267 13.4098 10.0806 13.3274C9.79225 13.1701 9.48513 13.0427 9.20797 12.8704C7.91581
+                    12.0577 6.8334 11.0127 5.87458 9.83668C5.39891 9.2524 4.97568 8.62692 4.6798 7.92279C4.61987 7.78046 4.63111 7.68683 4.74721 7.57072C5.19292 7.14 5.62738 6.69805 6.06559 6.25609C6.67609 5.64185 6.67609 4.92273 6.06185 4.30474C5.71353
+                    3.95268 5.3652 3.6081 5.01688 3.25604C4.65733 2.89648 4.30151 2.53318 3.93821 2.17736C3.35018 1.60432 2.61609 1.60432 2.03181 2.18111C1.58236 2.62306 1.15164 3.07626 0.694705 3.51072C0.271476 3.91148 0.0579884 4.40212 0.0130438 4.97517C-0.0581186
+                    5.90777 0.17035 6.78794 0.492454 7.64563C1.15164 9.42095 2.15541 10.9978 3.37266 12.4435C5.01688 14.3986 6.97947 15.9454 9.27539 17.0615C10.3091 17.5634 11.3803 17.9492 12.5451 18.0129C13.3466 18.0578 14.0433 17.8556 14.6013 17.2301C14.9834
+                    16.8031 15.4141 16.4136 15.8186 16.0053C16.4178 15.3986 16.4216 14.6645 15.8261 14.0652C15.1145 13.3499 14.3991 12.6382 13.6837 11.9266Z"
+                                            fill="white" />
+                                        <path d="M12.9672 8.93825L14.3493 8.70229C14.132 7.4326 13.5328 6.28277 12.6227 5.36889C11.6601 4.40633 10.4428 3.79957 9.10199 3.6123L8.90723 5.00184C9.9447 5.14791 10.8885 5.61609 11.6339 6.36142C12.338 7.06555 12.7987
+                    7.95696 12.9672 8.93825Z" fill="white" />
+                                        <path d="M15.1294 2.93344C13.5338 1.33791 11.5151 0.330398 9.28656 0.0195312L9.0918 1.40907C11.0169 1.67874 12.7623 2.55141 14.1406 3.92597C15.4477 5.23311 16.3054 6.88483 16.6163 8.70134L17.9983 8.46538C17.635 6.36047
+                    16.6425 4.45033 15.1294 2.93344Z" fill="white" />
+                                    </svg>
+                                </i>
+                                <a href="tel:+919966992122" class="text-decoration-none  d-flex align-items-center">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <span class="">+91 99669 92122</span>
+                                </a>
 
-            <h4>Supreme Admin</h4>
-            <p>Full control over the platform and user roles.</p>
+                            </li>
+                            <li>
+                                <i>
+                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.5043 8.78757C10.0565 9.08612 9.53631 9.24394 9 9.24394C8.46373 9.24394 7.94356 9.08612 7.49574 8.78757L0.119848 3.87016C0.0789258 3.84288 0.0390586 3.81444 0 3.78519V11.8429C0 12.7667 0.749707 13.4999 1.65702
+                    13.4999H16.3429C17.2668 13.4999 18 12.7502 18 11.8429V3.78516C17.9608 3.81448 17.9209 3.84299 17.8799 3.87031L10.5043 8.78757Z"
+                                            fill="white" />
+                                        <path
+                                            d="M0.704883 2.99347L8.08077 7.91091C8.35998 8.09707 8.67997 8.19012 8.99996 8.19012C9.31999 8.19012 9.64002 8.09703 9.91923 7.91091L17.2951 2.99347C17.7365 2.69939 18 2.2072 18 1.67599C18 0.762594 17.2569 0.0195312
+                    16.3435 0.0195312H1.65646C0.743098 0.0195664 0 0.762629 0 1.67687C0 2.2072 0.263531 2.69939 0.704883 2.99347Z"
+                                            fill="white" />
+                                    </svg>
+                                </i>
+                                <a href="mailto:info@appycode.tech" class="text-decoration-none ">
+                                    <span class="ms-2">info@appycode.tech</span>
+                                </a>
 
-            <h4>Front Office</h4>
-            <p>Handles appointment booking, patient registration, and basic data management.</p>
-
-            <h4>HR</h4>
-            <p>Create and publish job openings on the hospital’s careers page. Manage applicant tracking and resumes.
-            </p>
-
-            <h4>Media</h4>
-            <p>Manage blogs, galleries, campaigns, and promotions.</p>
-
-        </div>
-
-        <div class="card">
-            <i class="fas fa-user-injured"></i>
-            <h3>Patient Management System</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Helping doctors access accurate patient data and streamline the consultation flow.</p>
-
-            <h4>Features Across All Consultations</h4>
-            <ul>
-                <li>Centralized access to patient records via dashboard</li>
-                <li>Real-time visibility into upcoming appointments</li>
-                <li>Patient profiles include basic info, consultation history, and payment status</li>
-            </ul>
-
-            <h4>Video Consultations</h4>
-            <ul>
-                <li>Doctors can view scheduled virtual appointments</li>
-                <li>Access patient details before the call</li>
-                <li>Conduct consultation via secure video link</li>
-            </ul>
-
-            <h4>In-Person Consultations</h4>
-            <ul>
-                <li>Daily schedule is auto-updated on the doctor dashboard</li>
-                <li>Quick access to appointment type, timing, and patient details</li>
-            </ul>
-
-            <h4>Walk-Ins</h4>
-            <ul>
-                <li>Patient gets registered by the front desk</li>
-                <li>Doctor is notified in the backend with updated queue and details</li>
-                <li>Once registered, patients can directly book future appointments without re-registering</li>
-            </ul>
-
-        </div>
-
-        <div class="card">
-            <i class="fas fa-vials"></i>
-            <h3>Health Checkups & Diagnostics</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <ul>
-                <li>The admin panel allows hospital staff to easily add, edit, or delete individual diagnostic tests
-                </li>
-                <li> comprehensive health packages based on availability or seasonal needs</li>
-                <li>Patients can browse available tests, book appointments online, and receive instant confirmations and
-                    reminders via SMS and WhatsApp</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-hospital"></i>
-            <h3>Department Management</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <ul>
-                <li>Allows the hospital admin team to create, organize, and maintain every clinical department’s digital
-                    presence across the platform.</li>
-                <li>Add/Edit/Delete Departments</li>
-                <li>Link Doctors & Services</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-clock"></i>
-            <h3>Appointment Tracking</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <ul>
-                <li>Upcoming Appointments</li>
-                <li>Completed Appointments</li>
-                <li>Cancelled Appointments</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Dashboard</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>A centralized, real-time view of your hospital’s revenue performance on appointments, departmental
-                statistics, Health Check Up Revenue, payment summaries, Today's Bookings all at a glance.</p>
-        </div>
-
-
-
-        <div class="card">
-            <i class="fas fa-history"></i>
-            <h3>Appointment History</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Access a full log of all patient appointments, including status, mode (video/in-person), and payment
-                confirmation.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-notes-medical"></i>
-            <h3>E‑Prescription</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Doctors can instantly generate and share digital prescriptions with patients via WhatsApp using the
-                hospital’s official number.This enhances brand visibility while protecting doctor privacy.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-comment-dots"></i>
-            <h3>Messages</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>All incoming patient enquiries through forms or campaigns are routed directly to the admin panel, where
-                they can be tracked, categorized, and responded to promptly.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-globe"></i>
-            <h3>International Patient Module</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Designed for global access, this module supports overseas patients with multilingual forms,
-                timezone-adjusted scheduling, and dedicated enquiry tracking.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-bullhorn"></i>
-            <h3>Campaigns & Ads Manager</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Run awareness and promotional campaigns across platform. Responses are directly captured in the admin
-                panel.Banners for priority services can be managed and displayed on the homepage</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-user-md"></i>
-            <h3>Doctor Management</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Easily manage doctor profiles, schedules, specialties, and availability. Display verified profiles with
-                photo, expertise, and patient reviews.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-search"></i>
-            <h3>Search Doctors & Departments</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Enable patients to find the right care quickly with a search feature that filters doctors by specialty,
-                department, and availability.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-credit-card"></i>
-            <h3>Payments History</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>TTrack and view all payments made for appointments,walk-in registrations and health checkups. Integrated
-                with payment gateways for real-time reporting.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-images"></i>
-            <h3>Hospital Gallery Manager</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Visually showcase your hospital’s facilities, staff, and services with a customizable media gallery
-                managed through the backend.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-blog"></i>
-            <h3>Blogs</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Regularly publish educational and engaging articles focused on health awareness, wellness tips, and
-                expert advice from doctors.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-search-dollar"></i>
-            <h3>SEO Content</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Create search-engine-optimized articles, service descriptions, FAQs, and landing page content that target
-                specific keywords and patient queries. This content is strategically written to improve visibility on
-                Google, attract relevant traffic, and convert visitors into patients</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-briefcase"></i>
-            <h3>Career & Job Application</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Professionals apply to open positions directly on your website. HR can manage applications via the admin
-                panel.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-bell"></i>
-            <h3>Push Notifications + Voice Alerts</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Send automated notifications and voice alerts to patients for appointments, promotions, or test results,
-                enhancing communication and engagement.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-wallet"></i>
-            <h3>Online Payment Gateway Integration</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Securely collect payments for appointments, diagnostics, and services through integrated gateways like
-                Razorpay, Stripe, etc.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-user-doctor"></i>
-            <h3>Doctor Dashboard</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Each doctor has a personal dashboard to view appointments, access patient records, share prescriptions,
-                and manage their schedule.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Mobile Web-App for Doctors</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Doctors can access their dashboards via mobile, manage appointments, view patient info, and consult on
-                the go.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-camera"></i>
-            <h3>Doctor Profile Photoshoot</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Professional photo session to enhance the visual branding of doctor profiles used across the website,
-                marketing, and campaigns.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-lock"></i>
-            <h3>Security & Infrastructure</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Built with enterprise-grade cloud hosting, SSL encryption, firewall protection, and secure APIs to keep
-                patient data and operations safe.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Support & Maintenance</h3>
-            <hr style="border: 0; height: 2px; background-color: #f89a28; margin: 20px 0;opacity: 1;" />
-            <p>Maintenance and support (bugs, backups, updates).Covers SSL, server, domain renewals, protection, cloud
-                costs, WhatsApp & SMS integrations.</p>
-        </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="last-footer-sestion cs_height_lg_60"></div>
+                <ul class="cs_footer_nav">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="cs_copyright copy-right">
+                <div>© Copyright 2025 - appycode All Rights Reserved.</div>
+                <div>Designed & Developed by <a href="https://thinkb.agency/" target="_blank">thinkB</a></div>
+            </div>
+        </footer>
+        <!-- End Footer -->
 
     </div>
-    
 
     <span class="cs_scrollup">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -611,108 +769,6 @@
                 fill="currentColor" />
         </svg>
     </span>
-
-    <!-- Start Footer -->
-    <footer class="cs_footer cs_primary_bg">
-        <div class="footer-section cs_height_lg_60"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="cs_footer_info">
-                        <img src="assets/img/Appycode-logo(White).png" alt="Logo" />
-                        <p>
-                            Appycode is a Bangalore-based software development company dedicated to filling
-                            technological gaps in businesses with cutting-edge digital solutions.
-                        </p>
-                        <a href="mailto:info@appycode.tech"
-                            class="cs_primary_font anim_text_upanddowns"><span>info@appycode.tech</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="cs_footer_social">
-                        <a href="https://www.instagram.com/appy_code/?hl=en" class="cs_center"
-                            target="_blank">Instagram</a>
-                        <a href="https://www.linkedin.com/company/105894399/admin/dashboard/" target="_blank"
-                            class="cs_center">Linkedin</a>
-                        <a href="https://www.facebook.com/profile.php?id=61572753042027" class="cs_center"
-                            target="_blank">Facebook</a>
-                    </div>
-                    <div class="cs_height_60 cs_height_lg_30"></div>
-                    <ul class="cs_footer_contact_list cs_mp0">
-                        <li>
-                            <i>
-                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 0.0195312C3.14027 0.0195312 0 3.01027 0 6.68621C0 7.78973 0.289693 8.88387 0.840408 9.85434L6.6172 17.8047C6.69411 17.9373 6.84065 18.0195 7 18.0195C7.15935 18.0195 7.30589 17.9373 7.3828 17.8047L13.1617
-                    9.85105C13.7103 8.88387 14 7.78969 14 6.68617C14 3.01027 10.8597 0.0195312 7 0.0195312ZM7 10.0195C5.07014 10.0195 3.50002 8.52418 3.50002 6.68621C3.50002 4.84824 5.07014 3.35289 7 3.35289C8.92986 3.35289 10.5 4.84824 10.5 6.68621C10.5
-                    8.52418 8.92986 10.0195 7 10.0195Z" fill="white" />
-                                </svg>
-                            </i>
-                            204, 2nd Cross Rd, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka
-                        </li>
-                        <li>
-                            <i>
-                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.6837 11.9266C13.0957 11.3461 12.3616 11.3461 11.7773 11.9266C11.3316 12.3686 10.8859 12.8105 10.4477 13.26C10.3278 13.3836 10.2267 13.4098 10.0806 13.3274C9.79225 13.1701 9.48513 13.0427 9.20797 12.8704C7.91581
-                    12.0577 6.8334 11.0127 5.87458 9.83668C5.39891 9.2524 4.97568 8.62692 4.6798 7.92279C4.61987 7.78046 4.63111 7.68683 4.74721 7.57072C5.19292 7.14 5.62738 6.69805 6.06559 6.25609C6.67609 5.64185 6.67609 4.92273 6.06185 4.30474C5.71353
-                    3.95268 5.3652 3.6081 5.01688 3.25604C4.65733 2.89648 4.30151 2.53318 3.93821 2.17736C3.35018 1.60432 2.61609 1.60432 2.03181 2.18111C1.58236 2.62306 1.15164 3.07626 0.694705 3.51072C0.271476 3.91148 0.0579884 4.40212 0.0130438 4.97517C-0.0581186
-                    5.90777 0.17035 6.78794 0.492454 7.64563C1.15164 9.42095 2.15541 10.9978 3.37266 12.4435C5.01688 14.3986 6.97947 15.9454 9.27539 17.0615C10.3091 17.5634 11.3803 17.9492 12.5451 18.0129C13.3466 18.0578 14.0433 17.8556 14.6013 17.2301C14.9834
-                    16.8031 15.4141 16.4136 15.8186 16.0053C16.4178 15.3986 16.4216 14.6645 15.8261 14.0652C15.1145 13.3499 14.3991 12.6382 13.6837 11.9266Z"
-                                        fill="white" />
-                                    <path d="M12.9672 8.93825L14.3493 8.70229C14.132 7.4326 13.5328 6.28277 12.6227 5.36889C11.6601 4.40633 10.4428 3.79957 9.10199 3.6123L8.90723 5.00184C9.9447 5.14791 10.8885 5.61609 11.6339 6.36142C12.338 7.06555 12.7987
-                    7.95696 12.9672 8.93825Z" fill="white" />
-                                    <path d="M15.1294 2.93344C13.5338 1.33791 11.5151 0.330398 9.28656 0.0195312L9.0918 1.40907C11.0169 1.67874 12.7623 2.55141 14.1406 3.92597C15.4477 5.23311 16.3054 6.88483 16.6163 8.70134L17.9983 8.46538C17.635 6.36047
-                    16.6425 4.45033 15.1294 2.93344Z" fill="white" />
-                                </svg>
-                            </i>
-                            <a href="tel:+919966992122" class="text-decoration-none  d-flex align-items-center">
-                                <i class="bi bi-telephone-fill"></i>
-                                <span class="">+91 99669 92122</span>
-                            </a>
-
-                        </li>
-                        <li>
-                            <i>
-                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.5043 8.78757C10.0565 9.08612 9.53631 9.24394 9 9.24394C8.46373 9.24394 7.94356 9.08612 7.49574 8.78757L0.119848 3.87016C0.0789258 3.84288 0.0390586 3.81444 0 3.78519V11.8429C0 12.7667 0.749707 13.4999 1.65702
-                    13.4999H16.3429C17.2668 13.4999 18 12.7502 18 11.8429V3.78516C17.9608 3.81448 17.9209 3.84299 17.8799 3.87031L10.5043 8.78757Z"
-                                        fill="white" />
-                                    <path
-                                        d="M0.704883 2.99347L8.08077 7.91091C8.35998 8.09707 8.67997 8.19012 8.99996 8.19012C9.31999 8.19012 9.64002 8.09703 9.91923 7.91091L17.2951 2.99347C17.7365 2.69939 18 2.2072 18 1.67599C18 0.762594 17.2569 0.0195312
-                    16.3435 0.0195312H1.65646C0.743098 0.0195664 0 0.762629 0 1.67687C0 2.2072 0.263531 2.69939 0.704883 2.99347Z"
-                                        fill="white" />
-                                </svg>
-                            </i>
-                            <a href="mailto:info@appycode.tech" class="text-decoration-none ">
-                                <span class="ms-2">info@appycode.tech</span>
-                            </a>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="last-footer-sestion cs_height_lg_60"></div>
-            <ul class="cs_footer_nav">
-                <li><a href="#">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="service.html">SERVICES</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="cs_copyright copy-right">
-            <div>© Copyright 2025 - appycode All Rights Reserved.</div>
-            <div>Designed & Developed by <a href="https://thinkb.agency/" target="_blank">thinkB</a></div>
-        </div>
-    </footer>
-    <!-- End Footer -->
-
-    </div>
 
     <!-- Script -->
     <script src="assets/js/plugins/jquery-3.7.0.min.js"></script>
@@ -726,10 +782,9 @@
     <script src="assets/js/plugins/gsap.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-     <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!"
+    <a href="https://wa.me/919966992122?text=Hi%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more!"
         target="_blank" id="chatbotBtn" style="">
-        <img src="assets/img/Call-icon.svg" alt="chatbot-Btn"
-            style="width: 69px; height: 69px;" />
+        <img src="assets/img/Call-icon.svg" alt="chatbot-Btn" style="width: 69px; height: 69px;" />
     </a>
 
     <!-- Scripts -->
