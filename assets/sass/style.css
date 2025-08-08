@@ -955,6 +955,24 @@ kbd {
   }
 }
 
+@media screen and (max-width: 500px) {
+
+.play-button {
+    position: absolute;
+    bottom: 80% !important;
+    right: 35px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    padding: 22px 22px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+}
+
 @media screen and (max-width: 350px) {
   .video-caption-btn {
     padding: 10px 24px !important;
