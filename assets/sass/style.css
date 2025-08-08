@@ -9578,8 +9578,9 @@ label {
 .appy-care-container {
   display: flex;
   width: 96vw;
-  height: 100vh;
+  height: unset;
   overflow: hidden;
+  margin: 1.5rem;
 }
 
 .appy-care-container .card-section {
@@ -9657,7 +9658,7 @@ label {
     display: flex;
     flex-direction: column;
     width: 96vw;
-    height: 100vh;
+    height: unset;
     overflow: visible;
   }
 
